@@ -1,0 +1,53 @@
+body {
+  background-color: rgb(253, 225, 189);
+}
+
+header {
+  background: rgb(215, 228, 37);
+  height: 200px;
+}
+
+header img {
+  float: left;
+  margin-right: 50px;
+  margin-top: 50px;
+  margin-left: 50px;
+  background: #000;
+  border-radius: 50px;
+}
+
+#one {
+  padding-left: 250px;
+  padding-right: 250px;
+  padding-top: 75px;
+  padding-bottom: 25px;
+  font-family: 'Times New Roman';
+  font-size: 40px;
+  color: rgb(52, 56, 29);
+  text-align:  center;
+}
+.logoRules {
+  display: block;
+  width: 250px;
+  height: 400px;
+  margin-left: 20px;
+  margin-top: 35px;
+  font-size: 30px;
+}
+#rules {
+  margin-top:20px;
+
+}
+#puzzle {
+position: absolute;
+top: 350px;
+right: 500px;
+}
+
+.goal {
+  position: absolute;
+  top: 500px;
+  right: 100px;
+  display: block;
+  font-size: 25px;
+}
