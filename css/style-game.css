@@ -10,13 +10,14 @@
 
 
 header {
+  position: relative;
   background: rgb(215, 228, 37);
-  margin-left: 500px;
-  margin-right: 500px;
+  margin-left: 50px;
+  margin-right: 50px;
   margin-top: 10px;
   border-top-width: 5px;
   border-right-width: 5px;
-  height: 1500px;
+  height: 150px;
   border-radius: 25px;
 
 }
@@ -30,7 +31,7 @@ header {
   font-family: 'Sniglet', cursive;
   font-size: 80px;
   left: 215px;
-  top: 500px;
+  top: 35px;
 }
 ul {
   float: right;
@@ -59,17 +60,18 @@ ul img {
 
 
 div {
-  margin-bottom: 500px;
+  margin-bottom: 50px;
   width: 700px;
-  margin: 500px auto;
+  margin: 50px auto;
   border-radius: 25px;
   /* opacity: 0.5; */
   text-align: center;
+  position: relative;
 }
 
 #one {
-  padding-left: 2500px;
-  padding-right: 2500px;
+  padding-left: 250px;
+  padding-right: 250px;
   padding-top: 75px;
   padding-bottom: 25px;
   font-family: 'Times New Roman';
@@ -79,10 +81,10 @@ div {
 }
 .logoRules {
   display: block;
-  width: 2500px;
+  width: 250px;
   height: 400px;
   margin-left: 20px;
-  margin-top: 500px;
+  margin-top: 35px;
   font-size: 30px;
 }
 #rules {
@@ -186,10 +188,9 @@ div {
 
 
 
-
 #circle {
-  width: 500px;
-  height: 500px;
+  width: 35px;
+  height: 35px;
   background-color: white;
   -moz-border-radius: 60px;
   -webkit-border-radius: 60px;
@@ -198,8 +199,8 @@ div {
 
 
 #circle {
-  width: 500px;
-  height: 500px;
+  width: 35px;
+  height: 35px;
   background-color: white;
   -moz-border-radius: 60px;
   -webkit-border-radius: 60px;
@@ -208,8 +209,8 @@ div {
 
 
 #circle {
-  width: 500px;
-  height: 500px;
+  width: 35px;
+  height: 35px;
   background-color: white;
   -moz-border-radius: 60px;
   -webkit-border-radius: 60px;
@@ -218,8 +219,8 @@ div {
 
 
 #circle {
-  width: 500px;
-  height: 500px;
+  width: 35px;
+  height: 35px;
   background-color: white;
   -moz-border-radius: 60px;
   -webkit-border-radius: 60px;
@@ -228,8 +229,8 @@ div {
 
 
 #circle {
-  width: 500px;
-  height: 500px;
+  width: 35px;
+  height: 35px;
   background-color: white;
   -moz-border-radius: 60px;
   -webkit-border-radius: 60px;
@@ -238,8 +239,8 @@ div {
 
 
 #circle {
-  width: 500px;
-  height: 500px;
+  width: 35px;
+  height: 35px;
   background-color: white;
   -moz-border-radius: 60px;
   -webkit-border-radius: 60px;
