@@ -1,8 +1,8 @@
-#page1{
-  height: 100%;
+#page2 {
+  
   margin: 0;
   background-image: url("https://dumielauxepices.net/sites/default/files/background-clipart-landscape-846790-313843.png");
-  height:100%;
+  height:930px;
   background-position: center;
   background-repeat: no-repeat;
   
@@ -33,40 +33,18 @@ header {
   left: 215px;
   top: 35px;
 }
-
-main {
-  height: 700px;
-  margin-top: 50px;
-  margin-right: 50px;
-  margin-left: 50px;
-  display: block;
-  text-align: center;
+ul {
+  float: right;
+  margin-top: 25px;
+  margin-right: 20px;
+}
+li {
+  margin-bottom: 10px;
 }
 
-#pre {
-  background-color: orange;
-  height: 120px;
-  color:white;
-  font-size: 30px
-}
-#k {
-  background-color: red;
-  height: 120px;
-  color:white;
-  font-size: 30px
-}
-#first {
-  background-color: green;
-  height: 120px;
-  color:white;
-  font-size: 30px
-}
-#second {
-  background-color: blue;
-  height: 120px;
-  color:white;
-  font-size: 30px
-}
+
+
+
 div {
   margin-bottom: 50px;
   width: 700px;
@@ -76,14 +54,7 @@ div {
   text-align: center;
   position: relative;
 }
-ul {
-  float: right;
-  margin-top: 25px;
-  margin-right: 20px;
-}
-li {
-  margin-bottom: 10px;
-}
+
 #one {
   padding-left: 250px;
   padding-right: 250px;
@@ -107,13 +78,13 @@ li {
 
 }
 #puzzle {
-position: absolute;
+/* position: absolute; */
 top: 350px;
 right: 500px;
 }
 
 .goal {
-  position: absolute;
+  /* position: absolute; */
   top: 500px;
   right: 100px;
   display: block;

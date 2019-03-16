@@ -1,0 +1,50 @@
+#page3 {
+  
+  margin: 0;
+  background-image: url("https://dumielauxepices.net/sites/default/files/background-clipart-landscape-846790-313843.png");
+  height:930px;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+
+header {
+  position: relative;
+  background: rgb(215, 228, 37);
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 10px;
+  border-top-width: 5px;
+  border-right-width: 5px;
+  height: 150px;
+  border-radius: 25px;
+
+}
+
+.bee {
+  background:none;
+  float: left;
+}
+.title {
+  position: absolute;
+  font-family: 'Sniglet', cursive;
+  font-size: 80px;
+  left: 215px;
+  top: 35px;
+}
+ul {
+  float: right;
+  margin-top: 25px;
+  margin-right: 20px;
+}
+li {
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
