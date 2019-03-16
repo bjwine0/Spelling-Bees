@@ -125,8 +125,8 @@ function startFunction () {
   getPicElem.src = levelOnePics[0].filePath;
   var string = levelOnePics[0].name;
   for (var i = 0; i < levelOnePics[0].name.length; i++) {
-    
-    
+
+
 
     var res = string.charAt(i);
     res =[];
@@ -138,16 +138,16 @@ function startFunction () {
   placeTen();
   // function calling 10 alphabets letters
 
-  
+
 }
 var tenRandom = []; //used for local storage later
 
 function placeTen() {
-  debugger;
+  
   var currentTen = [];
   var imgEl = [];
   for (var i = 0; i < 10; i++) {
-    
+
     currentTen[i] = getRandom();
     // var liElem = document.createElement('li');  // maybe use list element and append image to it?
     var imgElem = document.createElement('img');
@@ -165,8 +165,135 @@ function placeTen() {
 
 function getRandom() {
   return Math.floor(Math.random() * allAlphabets.length);
-  
+
 }
 
 // function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

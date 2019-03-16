@@ -105,3 +105,147 @@ div {
   display: block;
   font-size: 25px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.parent {
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+}
+.parent:after {
+  content:"";
+  border-radius: 50%;
+  top: 55px;
+  left: 55px;
+  right: 55px;
+  bottom: 55px;
+  position: relative;
+}
+.star {
+  position: relative;
+  width: 0px;
+  height: 0px;
+  border-width: 20px 20px 20px 20px;
+  border-color: transparent transparent white;
+  border-style: solid;
+}
+.star:after {
+  content:"";
+  position: relative;
+  width: 0px;
+  height: 0px;
+  border-width: 20px 20px 20px 20px;
+  border-color: transparent transparent white;
+  border-style: solid;
+  -webkit-transform: rotate(180deg);
+  top: 7px;
+  left: -20px;
+}
+.top {
+  top: 12.5%;
+}
+.left {
+  left: 12.5%;
+}
+.bottom {
+  bottom: 20%;
+}
+.right {
+  right: 12.5%;
+}
+.topMid {
+  top:0px;  
+  left:50%;
+  margin-left:-25px;
+}
