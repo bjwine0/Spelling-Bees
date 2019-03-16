@@ -123,6 +123,17 @@ document.getElementById('start').addEventListener('click', startFunction);
 
 function startFunction () {
   getPicElem.src = levelOnePics[0].filePath;
+  var string = levelOnePics[0].name;
+  for (var i = 0; i < levelOnePics[0].name.length; i++) {
+    
+    
+
+    var res = string.charAt(i);
+    res =[];
+
+  }
+  console.log('string', string);
+  console.log('res', res);
   startButtonBye();
   placeTen();
   // function calling 10 alphabets letters
@@ -157,4 +168,5 @@ function getRandom() {
   
 }
 
+// function
 
