@@ -24,3 +24,7 @@ Kindergarden picture-word association game with syllable and vowel education
 3. Get the first set of merges complete without conflicts
 4. Have jobs assigned for each indivdual.
 5. Have open communication
+6. Functionallity of level 1 puzzle
+7. Input fields for the form
+8. Functionallity for the game page
+9. Collection of image and audio
