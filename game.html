@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
   <link rel="stylesheet" href="css/style-game.css">  
   <link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet">
 </head>
-<body id="page2">
+<body style= "background-image: url(img/background.png)" id="page2">
   <header id="clouds" >
       
     <img class="bee" src="img/bee.png" alt="bee image" width="200px" height="200px">
@@ -22,21 +23,48 @@
   </header>
 
   <ul class="logoRules">
-      <li><img src="http://placehold.it/250x100"></li>
+    <!-- image to be logo   -->
+    <li><img src="http://placehold.it/250x100"></li> 
       <li id="rules">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure incidunt, quae ratione dicta libero fugiat, et tenetur accusantium natus nulla aspernatur recusandae repudiandae autem numquam quaerat, possimus sapiente! Officiis, qui!</li>
     </ul>
-  
-    <img src="img/car.png" id="puzzle" width="500px" height="350px">
-  
-  
-    <div>
-      <ul id="alphabet"></ul>
-    </div>
-  
-    <p class="goal">Points to See the Puzzle! = <img src="http://placehold.it/25x25"></p>
+    
+    <!-- this is the main puzzle pic, to be populated by an array -->
+    <section>
+      <img src="http://placehold.it/600x400" id="puzzle">
+    <section>
+    <!-- this image will be the pic that they are trying to spell and populated by an array -->
+    <img src="img/car.png" id="spellPic" width="400px" height="250px">
+    </section>
+    <section>
+      <p id="Pick">Pick Your Letters!</p>
+    </section>
+    <section>
+    <ul id="alphabet">
+      
+      <li><img src="http://placehold.it/75x100"></li>
+      <li><img src="http://placehold.it/75x100"></li>
+      <li><img src="http://placehold.it/75x100"></li>
+      <li><img src="http://placehold.it/75x100"></li>
+      <li><img src="http://placehold.it/75x100"></li>
+      <li><img src="http://placehold.it/75x100"></li>
+      <li><img src="http://placehold.it/75x100"></li>
+      <li><img src="http://placehold.it/75x100"></li>
+      <li><img src="http://placehold.it/75x100"></li>
+      <li><img src="http://placehold.it/75x100"></li>
+      </ul>
+    </section>
+    
+
+    <section class="goal">
+      <p>Ticket Goal = 9</p>
+    <p>Total Tickets = 
+      <img src="http://placehold.it/25x25"></p>
+    </section>
+      <!-- total tickets to be populated from counter instead of an image-->
     <!-- <script src="js/app.js"></script> -->
 
 
 </body>
 </html>
+
 

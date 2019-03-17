@@ -1,10 +1,8 @@
 #page2 {
   
   margin: 0;
-  background-image: url("https://dumielauxepices.net/sites/default/files/background-clipart-landscape-846790-313843.png");
-  height:930px;
   background-position: center;
-  background-repeat: no-repeat;
+  background: fixed;
   
 }
 
@@ -40,6 +38,7 @@ ul {
 }
 li {
   margin-bottom: 10px;
+  font-family: 'Sniglet', cursive;
 }
 
 
@@ -66,27 +65,59 @@ div {
   
 }
 .logoRules {
+  position: absolute;
   display: block;
   width: 250px;
   height: 400px;
   margin-left: 20px;
-  margin-top: 35px;
+  margin-top: 100px;
   font-size: 30px;
+  font-family: 'Sniglet', cursive;
 }
 #rules {
   margin-top:20px;
 
 }
-#puzzle {
-/* position: absolute; */
-top: 350px;
-right: 500px;
-}
 
+#puzzle {
+position: relative;
+top: 50px;
+left: 250px;
+}
+#spellPic {
+  position: relative;
+  top: 120px;
+  left: 600px;
+  }
+#Pick {
+  position: relative;
+  width: 250px;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background:  rgb(215, 228, 37);
+  font-family: 'Sniglet', cursive;
+  border-radius: 6px;
+  left: 690px;
+  top: 200px;
+  font-size: 25px;
+}
+#alphabet{
+position:relative;
+right: 300px;
+top: 200px;
+}
+#alphabet li{
+  display: inline-block;
+  margin-left: 20px;
+}
 .goal {
-  /* position: absolute; */
-  top: 500px;
+  position: absolute;
+  top: 300px;
   right: 100px;
   display: block;
   font-size: 25px;
+  font-family: 'Sniglet', cursive;
 }
