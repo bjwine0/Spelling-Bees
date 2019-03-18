@@ -32,32 +32,32 @@ function ImageAlph(name, ext) {
   allAlphabets.push(this);
 }
 
-new ImageAlph('A', 'jpg');
-new ImageAlph('B', 'jpg');
-new ImageAlph('C', 'jpg');
-new ImageAlph('D', 'jpg');
-new ImageAlph('E', 'jpg');
-new ImageAlph('F', 'jpg');
-new ImageAlph('G', 'jpg');
-new ImageAlph('H', 'jpg');
-new ImageAlph('I', 'jpg');
-new ImageAlph('J', 'jpg');
-new ImageAlph('K', 'jpg');
-new ImageAlph('L', 'jpg');
-new ImageAlph('M', 'jpg');
-new ImageAlph('N', 'jpg');
-new ImageAlph('O', 'jpg');
-new ImageAlph('P', 'jpg');
-new ImageAlph('Q', 'jpg');
-new ImageAlph('R', 'jpg');
-new ImageAlph('S', 'jpg');
-new ImageAlph('T', 'jpg');
-new ImageAlph('U', 'jpg');
-new ImageAlph('V', 'jpg');
-new ImageAlph('W', 'jpg');
-new ImageAlph('X', 'jpg');
-new ImageAlph('Y', 'jpg');
-new ImageAlph('Z', 'jpg');
+new ImageAlph('A', 'png');
+new ImageAlph('B', 'png');
+new ImageAlph('C', 'png');
+new ImageAlph('D', 'png');
+new ImageAlph('E', 'png');
+new ImageAlph('F', 'png');
+new ImageAlph('G', 'png');
+new ImageAlph('H', 'png');
+new ImageAlph('I', 'png');
+new ImageAlph('J', 'png');
+new ImageAlph('K', 'png');
+new ImageAlph('L', 'png');
+new ImageAlph('M', 'png');
+new ImageAlph('N', 'png');
+new ImageAlph('O', 'png');
+new ImageAlph('P', 'png');
+new ImageAlph('Q', 'png');
+new ImageAlph('R', 'png');
+new ImageAlph('S', 'png');
+new ImageAlph('T', 'png');
+new ImageAlph('U', 'png');
+new ImageAlph('V', 'png');
+new ImageAlph('W', 'png');
+new ImageAlph('X', 'png');
+new ImageAlph('Y', 'png');
+new ImageAlph('Z', 'png');
 
 
 
