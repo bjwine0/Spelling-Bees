@@ -122,51 +122,85 @@ function startButtonBye () {
 document.getElementById('start').addEventListener('click', startFunction);
 
 function startFunction () {
+  debugger;
   getPicElem.src = levelOnePics[0].filePath;
   var string = levelOnePics[0].name;
+  var word =[];
+  var indexLoca = [];
+  
   for (var i = 0; i < levelOnePics[0].name.length; i++) {
-    
-    
-
-    var res = string.charAt(i);
-    res =[];
-
+    word[i] = string.charAt(i);
+    word[i] = word[i].toUpperCase();  // incase user unputs lowercase field data? 
   }
-  console.log('string', string);
-  console.log('res', res);
+  for (var j = 0; j < word.length; j++) {
+    for( var k = 0; k < allAlphabets.length; k++) {
+      if (word[j] === allAlphabets[k].name) {
+        console.log('true');
+        indexLoca[j] = (k);
+        console.log('indexLocation', indexLoca);
+      }
+    }
+  }
+  var currentTen = [];
+
+  for (var i = 0; i < 12 - indexLoca.length; i++) {
+    currentTen[i] = getRandom();
+  }
+
+  var wordPlusRandom = indexLoca.concat(currentTen);
+  imgString.push(wordPlusRandom);
+  console.log('curenttem', currentTen);
+  console.log('wordPlusRandom', wordPlusRandom);
+
+  var shuffled = shuffle(wordPlusRandom);
+  console.log('shuffled', shuffled);
+
+  for (var i = 0; i < shuffled.length; i++) {
+
+  
+    var imgElem = document.createElement('img');
+    imgElem.src = allAlphabets[shuffled[i]].filePath;
+    
+    alphabetElem.appendChild(imgElem);
+    
+  }
+
+  
   startButtonBye();
-  placeTen();
-  // function calling 10 alphabets letters
+  
 
   
 }
-var tenRandom = []; //used for local storage later
 
-function placeTen() {
-  debugger;
-  var currentTen = [];
-  var imgEl = [];
-  for (var i = 0; i < 10; i++) {
-    
-    currentTen[i] = getRandom();
-    // var liElem = document.createElement('li');  // maybe use list element and append image to it?
-    var imgElem = document.createElement('img');
-    imgElem.src = allAlphabets[currentTen[i]].filePath;
-    // var imgSource = imgEl.src;
-    alphabetElem.appendChild(imgElem);
-    // imgElem.append(imgEl);
-    // imgElem[i].src = allAlphabets[currentTen[i]].filePath;
+var imgString = [];  //  use for local storage
+console.log('imgstring', imgString);
+
+
+
+
+
+
+
+
+
+
+
+
+
+function shuffle(a) {
+  var j, x, i;
+  for (i = a.length - 1; i > 0; i--) {
+    j = Math.floor(Math.random() * (i + 1));
+    x = a[i];
+    a[i] = a[j];
+    a[j] = x;
   }
-  console.log('currentten', currentTen);
-  for (var j = 0; i < currentTen.length; j++) {
-    imgEl[j].src = allAlphabets[currentTen[j]].filePath;
-  }
+  return a;
 }
+
+
 
 function getRandom() {
   return Math.floor(Math.random() * allAlphabets.length);
   
 }
-
-// function
-
