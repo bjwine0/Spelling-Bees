@@ -221,6 +221,7 @@ function click(event) {
       if (elem.id === newSlot[i].className);
       console.log('true', elem.id, newSlot[i].className);
       list[0].append(newElem);
+
       if (list[0].length > 1) {
         list[0] = list[0].pop();
       }
@@ -228,6 +229,8 @@ function click(event) {
       // var getClass = document.get
       // elem.remove();
       list[0].classList.className.remove();  // bug to remove or change class id
+
+      
 
       break;
 
