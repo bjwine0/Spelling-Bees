@@ -3,12 +3,7 @@
 var getPicElem = document.getElementById('puzzle');
 var alphabetElem = document.getElementById('alphabet');
 var slots = document.getElementById('slots');
-var levelOneImg = ['car', 'star', 'dog'];
-console.log('levelOneImg', levelOneImg);
-var levelTwoImg = ['bubble', 'apple', 'dragon'];
-console.log('leveTwoImg', levelTwoImg);
-var levelThreeImg = ['butterfly', 'elephant', 'strawberry'];
-console.log('levelThreeImg', levelThreeImg);
+
 
 
 var allAlphabets = [];
@@ -131,13 +126,13 @@ function startFunction () {
   
   for (var i = 0; i < string.length; i++) {
     word[i] = string.charAt(i);
-    word[i] = word[i].toUpperCase();  // incase user unputs lowercase field data? 
+    word[i] = word[i].toUpperCase();  
     
   }
   wordCheck.push(word);
   for ( i = 0; i < word.length; i++) {
     var newSlots = document.createElement('li');
-    newSlots.className = word[i]; // assigned class name // had id name conflict
+    newSlots.className = word[i]; 
     newSlot.push(newSlots);
     console.log('slots', newSlots);
     slots.appendChild(newSlots);
@@ -171,14 +166,12 @@ function startFunction () {
   // debugger;
   for (var i = 0; i < shuffled.length; i++) {
 
-  
     var imgElem = document.createElement('img');
-    
+  
     imgElem.src = allAlphabets[shuffled[i]].filePath;
     imgElem.id = allAlphabets[shuffled[i]].name; 
     filePath[i] = shuffled[i];
     imgElem.addEventListener('click', click);
-    // filePath.push(imgElem.src);
     alphabetElem.appendChild(imgElem);
 
   }
@@ -187,9 +180,6 @@ function startFunction () {
   console.log('imgString', imgString);
   
   startButtonBye();
-  
-
-  
 }
 var imgString = [];
 var filePath = [];  //  use for local storage
@@ -218,19 +208,10 @@ function click(event) {
       console.log('true', elem.id, newSlot[i].className);
       list[0].append(newElem);
       newElem.id = 'done';
-      list[0].className = 'done'; 
+      list[0].className = 'done';
     }
   }
 }
-
-
-
-
-
-
-
-
-
 
 function shuffle(a) {
   var j, x, i;
@@ -243,9 +224,6 @@ function shuffle(a) {
   return a;
 }
 
-
-
 function getRandom() {
   return Math.floor(Math.random() * allAlphabets.length);
-  
 }
