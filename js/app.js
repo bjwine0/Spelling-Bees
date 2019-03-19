@@ -3,12 +3,7 @@
 var getPicElem = document.getElementById('puzzle');
 var alphabetElem = document.getElementById('alphabet');
 var slots = document.getElementById('slots');
-var levelOneImg = ['car', 'star', 'dog'];
-console.log('levelOneImg', levelOneImg);
-var levelTwoImg = ['bubble', 'apple', 'dragon'];
-console.log('leveTwoImg', levelTwoImg);
-var levelThreeImg = ['butterfly', 'elephant', 'strawberry'];
-console.log('levelThreeImg', levelThreeImg);
+
 
 
 var allAlphabets = [];
@@ -69,9 +64,9 @@ function levelOne (name, ext) {
   levelOnePics.push(this);
 }
 
-new levelOne('squiggle', 'jpg');
-new levelOne('alph', 'png');
-new levelOne('bee', 'jpg');
+new levelOne('car', 'png');
+new levelOne('star', 'png');
+new levelOne('dog', 'png');
 
 
 function levelTwo (name, ext) {
@@ -82,9 +77,9 @@ function levelTwo (name, ext) {
   levelTwoPics.push(this);
 }
 
-new levelTwo('squiggle', 'jpg');
-new levelTwo('alph', 'png');
-new levelTwo('bee', 'jpg');
+new levelTwo('apple', 'png');
+new levelTwo('dragon', 'png');
+new levelTwo('bubble', 'png');
 
 function levelThree (name, ext) {
   this.name = name;
@@ -94,9 +89,9 @@ function levelThree (name, ext) {
   levelThreePics.push(this);
 }
 
-new levelThree('squiggle', 'jpg');
-new levelThree('alph', 'png');
-new levelThree('bee', 'jpg');
+new levelThree('elephant', 'png');
+new levelThree('strawberry', 'png');
+new levelThree('butterfly', 'png');
 
 
 function removeButton() {
@@ -123,20 +118,20 @@ document.getElementById('start').addEventListener('click', startFunction);
 
 function startFunction () {
   debugger;
-  getPicElem.src = levelOnePics[0].filePath;
-  var string = levelOnePics[0].name;
+  getPicElem.src = levelOnePics[2].filePath;
+  var string = levelOnePics[2].name;
   var word =[];
   var indexLoca = [];
   
-  for (var i = 0; i < levelOnePics[0].name.length; i++) {
+  for (var i = 0; i < string.length; i++) {
     word[i] = string.charAt(i);
-    word[i] = word[i].toUpperCase();  // incase user unputs lowercase field data? 
+    word[i] = word[i].toUpperCase();  
     
   }
   wordCheck.push(word);
   for ( i = 0; i < word.length; i++) {
     var newSlots = document.createElement('li');
-    newSlots.className = word[i]; // assigned class name // had id name conflict
+    newSlots.className = word[i]; 
     newSlot.push(newSlots);
     console.log('slots', newSlots);
     slots.appendChild(newSlots);
@@ -170,14 +165,12 @@ function startFunction () {
   // debugger;
   for (var i = 0; i < shuffled.length; i++) {
 
-  
     var imgElem = document.createElement('img');
-    
+  
     imgElem.src = allAlphabets[shuffled[i]].filePath;
     imgElem.id = allAlphabets[shuffled[i]].name; 
     filePath[i] = shuffled[i];
     imgElem.addEventListener('click', click);
-    // filePath.push(imgElem.src);
     alphabetElem.appendChild(imgElem);
 
   }
@@ -186,9 +179,6 @@ function startFunction () {
   console.log('imgString', imgString);
   
   startButtonBye();
-  
-
-  
 }
 var imgString = [];
 var filePath = [];  //  use for local storage
@@ -201,8 +191,7 @@ function click(event) {
   for(var i = 0; i < filePath.length; i++) { // 12
     if(event.target.id === wordCheck[0][i]) {
       console.log('true', event.target.id, wordCheck[0][i]);
-      
-      
+ 
       var elem = document.getElementById(event.target.id);
       console.log('elem', elem);
       elem.remove();
@@ -213,46 +202,15 @@ function click(event) {
       var newElem = document.createElement('img');
       newElem = elem;
 
-
-      
-
       console.log('newElem', newElem);
       if (elem.id === newSlot[i].className);
       console.log('true', elem.id, newSlot[i].className);
       list[0].append(newElem);
-
-      if (list[0].length > 1) {
-        list[0] = list[0].pop();
-      }
-      // document.getElementsByClassName
-      // var getClass = document.get
-      // elem.remove();
-      list[0].classList.className.remove();  // bug to remove or change class id
-
-      
-
-      break;
-
-      // allProducts[i].click += 1;
-      // console.log(`${event.target.id} has ${allProducts[i].click};
-    }else{
-      console.log('false');
+      newElem.id = 'done';
+      list[0].className = 'done';
     }
   }
-  
-  
-  
-
 }
-
-
-
-
-
-
-
-
-
 
 function shuffle(a) {
   var j, x, i;
@@ -265,9 +223,6 @@ function shuffle(a) {
   return a;
 }
 
-
-
 function getRandom() {
   return Math.floor(Math.random() * allAlphabets.length);
-  
 }
