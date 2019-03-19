@@ -1,4 +1,5 @@
 'use strict';
+console.log("script loaded")
 
 var getPicElem = document.getElementById('puzzle');
 var alphabetElem = document.getElementById('alphabet');
