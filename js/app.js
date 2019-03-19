@@ -64,9 +64,9 @@ function levelOne (name, ext) {
   levelOnePics.push(this);
 }
 
-new levelOne('car', 'png');
-new levelOne('star', 'png');
-new levelOne('dog', 'png');
+new levelOne('Car', 'png');
+new levelOne('Star', 'png');
+new levelOne('Dog', 'png');
 
 
 function levelTwo (name, ext) {
@@ -77,9 +77,9 @@ function levelTwo (name, ext) {
   levelTwoPics.push(this);
 }
 
-new levelTwo('apple', 'png');
-new levelTwo('dragon', 'png');
-new levelTwo('bubble', 'png');
+new levelTwo('Apple', 'png');
+new levelTwo('Dragon', 'png');
+new levelTwo('Bubble', 'png');
 
 function levelThree (name, ext) {
   this.name = name;
@@ -89,9 +89,9 @@ function levelThree (name, ext) {
   levelThreePics.push(this);
 }
 
-new levelThree('elephant', 'png');
-new levelThree('strawberry', 'png');
-new levelThree('butterfly', 'png');
+new levelThree('Elephant', 'png');
+new levelThree('Strawberry', 'png');
+new levelThree('Butterfly', 'png');
 
 
 function removeButton() {
