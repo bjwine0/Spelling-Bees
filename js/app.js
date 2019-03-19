@@ -1,6 +1,6 @@
 'use strict';
 
-var getPicElem = document.getElementById('puzzle');
+var getPicElem = document.getElementById('level-img');
 var alphabetElem = document.getElementById('alphabet');
 var slots = document.getElementById('slots');
 
@@ -118,34 +118,40 @@ document.getElementById('start').addEventListener('click', startFunction);
 
 function startFunction () {
   debugger;
-  getPicElem.src = levelOnePics[2].filePath;
-  var string = levelOnePics[2].name;
-  var word =[];
-  var indexLoca = [];
-  
-  for (var i = 0; i < string.length; i++) {
-    word[i] = string.charAt(i);
-    word[i] = word[i].toUpperCase();  
+  for (var i = 0; i <= levelOnePics.length; i++) {
+    var newElem = document.createElement('img');
+    newElem.src = levelOnePics[i].filePath;
+    newElem.id = levelOnePics[i].name;
+    getPicElem.appendChild(newElem);
     
-  }
-  wordCheck.push(word);
-  for ( i = 0; i < word.length; i++) {
-    var newSlots = document.createElement('li');
-    newSlots.className = word[i]; 
-    newSlot.push(newSlots);
-    console.log('slots', newSlots);
-    slots.appendChild(newSlots);
+    var string = levelOnePics[i].name;
+    var word =[];
+    var indexLoca = [];
+  
+    for (var i = 0; i < string.length; i++) {
+      word[i] = string.charAt(i);
+      word[i] = word[i].toUpperCase();  
+    
+    }
+    wordCheck.push(word);
+    for ( i = 0; i < word.length; i++) {
+      var newSlots = document.createElement('li');
+      newSlots.className = word[i]; 
+      newSlot.push(newSlots);
+      console.log('slots', newSlots);
+      slots.appendChild(newSlots);
 
-  }
+    }
 
-  console.log('word', word);
-  for (var j = 0; j < word.length; j++) {
-    for( var k = 0; k < allAlphabets.length; k++) {
-      if (word[j] === allAlphabets[k].name) {
-        console.log('true');
-        indexLoca[j] = (k);
-        console.log('indexLocation', indexLoca);
-        break;
+    console.log('word', word);
+    for (var j = 0; j < word.length; j++) {
+      for( var k = 0; k < allAlphabets.length; k++) {
+        if (word[j] === allAlphabets[k].name) {
+          console.log('true');
+          indexLoca[j] = (k);
+          console.log('indexLocation', indexLoca);
+          break;
+        }
       }
     }
   }

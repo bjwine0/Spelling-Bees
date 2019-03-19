@@ -70,9 +70,12 @@ div {
 }
 #slots {
   
-  width: 1100px;
-  /* display: inline-block; */
-  /* margin 0 auto; */
+  position: absolute;
+  left: 906px;
+  display: flex;
+  margin-right: 10px;
+  width: 1000px;
+  top: 500px;
 }
 
 #slots li {
@@ -113,28 +116,29 @@ div {
 }
 
 #puzzle {
-
-
-
+  
   position: absolute;
   right: 700px;
   bottom: 506px;
   top: 190px;
-
+}
 
 #spellPic {
   position: relative;
   top: 120px;
   left: 600px;
-  }
-  #correctLetters {
-    position: relative;
-    right: 565px;
+}
+
+#correctLetters {
+  position: relative;
+  right: 565px;
     
-  }
-  #correctLetters li {
-    display: inline-block;
-  }
+}
+
+#correctLetters li {
+  display: inline-block;
+}
+
 #Pick {
   position: relative;
   width: 250px;
@@ -168,3 +172,25 @@ top: 200px;
   font-size: 25px;
   font-family: 'Sniglet', cursive;
 }
+
+#start {
+  position: absolute;
+  left: 910px;
+  top: 550px;
+  margin-right: 100px;
+  margin-left: 100px;
+  border-bottom-width: 50px;
+  border-top-width: 50px;
+  border-left-width: 50px;
+  border-right-width: 50px;
+}
+
+#car {
+  
+  width: 450px;
+  height: 300px;
+  position: absolute;
+  left: 800px;
+  top: 194px;
+}
+
