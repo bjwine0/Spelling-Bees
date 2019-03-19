@@ -70,9 +70,9 @@ function levelOne (name, ext) {
   levelOnePics.push(this);
 }
 
-new levelOne('squiggle', 'jpg');
-new levelOne('alph', 'png');
-new levelOne('bee', 'jpg');
+new levelOne('car', 'png');
+new levelOne('star', 'png');
+new levelOne('dog', 'png');
 
 
 function levelTwo (name, ext) {
@@ -83,9 +83,9 @@ function levelTwo (name, ext) {
   levelTwoPics.push(this);
 }
 
-new levelTwo('squiggle', 'jpg');
-new levelTwo('alph', 'png');
-new levelTwo('bee', 'jpg');
+new levelTwo('apple', 'png');
+new levelTwo('dragon', 'png');
+new levelTwo('bubble', 'png');
 
 function levelThree (name, ext) {
   this.name = name;
@@ -95,9 +95,9 @@ function levelThree (name, ext) {
   levelThreePics.push(this);
 }
 
-new levelThree('squiggle', 'jpg');
-new levelThree('alph', 'png');
-new levelThree('bee', 'jpg');
+new levelThree('elephant', 'png');
+new levelThree('strawberry', 'png');
+new levelThree('butterfly', 'png');
 
 
 function removeButton() {
@@ -124,12 +124,12 @@ document.getElementById('start').addEventListener('click', startFunction);
 
 function startFunction () {
   debugger;
-  getPicElem.src = levelOnePics[0].filePath;
-  var string = levelOnePics[0].name;
+  getPicElem.src = levelOnePics[2].filePath;
+  var string = levelOnePics[2].name;
   var word =[];
   var indexLoca = [];
   
-  for (var i = 0; i < levelOnePics[0].name.length; i++) {
+  for (var i = 0; i < string.length; i++) {
     word[i] = string.charAt(i);
     word[i] = word[i].toUpperCase();  // incase user unputs lowercase field data? 
     
@@ -202,8 +202,7 @@ function click(event) {
   for(var i = 0; i < filePath.length; i++) { // 12
     if(event.target.id === wordCheck[0][i]) {
       console.log('true', event.target.id, wordCheck[0][i]);
-      
-      
+ 
       var elem = document.getElementById(event.target.id);
       console.log('elem', elem);
       elem.remove();
@@ -214,36 +213,14 @@ function click(event) {
       var newElem = document.createElement('img');
       newElem = elem;
 
-
-      
-
       console.log('newElem', newElem);
       if (elem.id === newSlot[i].className);
       console.log('true', elem.id, newSlot[i].className);
       list[0].append(newElem);
-
-      if (list[0].length > 1) {
-        list[0] = list[0].pop();
-      }
-      // document.getElementsByClassName
-      // var getClass = document.get
-      // elem.remove();
-      list[0].classList.className.remove();  // bug to remove or change class id
-
-      
-
-      break;
-
-      // allProducts[i].click += 1;
-      // console.log(`${event.target.id} has ${allProducts[i].click};
-    }else{
-      console.log('false');
+      newElem.id = 'done';
+      list[0].className = 'done'; 
     }
   }
-  
-  
-  
-
 }
 
 
