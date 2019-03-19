@@ -116,6 +116,17 @@ function startButtonBye () {
 
 document.getElementById('start').addEventListener('click', startFunction);
 
+// function levelRotate () {
+//   debugger
+//   for (var i = 0; i <= levelOnePics.length; i++) {
+//     var newElem = document.createElement('img');
+//     newElem.src = levelOnePics[i].filePath;
+//     newElem.id = levelOnePics[i].name;
+//     getPicElem.appendChild(newElem);
+//     startFunction();
+//   }
+// }
+
 function startFunction () {
   debugger;
   for (var i = 0; i <= levelOnePics.length; i++) {
@@ -190,14 +201,16 @@ var imgString = [];
 var filePath = [];  //  use for local storage
 var newSlot = [];
 var wordCheck =[];
-
+var trueCount = 0;
 function click(event) {
   debugger;
+  
   console.log('clicked', event.target.id);
   for(var i = 0; i < filePath.length; i++) { // 12
     if(event.target.id === wordCheck[0][i]) {
       console.log('true', event.target.id, wordCheck[0][i]);
- 
+      
+      trueCount += 1;
       var elem = document.getElementById(event.target.id);
       console.log('elem', elem);
       elem.remove();
@@ -207,16 +220,28 @@ function click(event) {
       console.log('list', list);
       var newElem = document.createElement('img');
       newElem = elem;
-
       console.log('newElem', newElem);
-      if (elem.id === newSlot[i].className);
-      console.log('true', elem.id, newSlot[i].className);
-      list[0].append(newElem);
-      newElem.id = 'done';
-      list[0].className = 'done';
+
+      if (elem.id === newSlot[i].className){
+        console.log('true', elem.id, newSlot[i].className);
+        list[0].append(newElem);
+        newElem.id = 'done';
+        list[0].className = 'done';
+      }
     }
+    console.log('count', trueCount);
   }
+
+  if (trueCount === 3){
+    console.log('true', trueCount); 
+    goodJob();
+  } else {
+    console.log('false', trueCount);
+  }
+  
 }
+
+
 
 function shuffle(a) {
   var j, x, i;
@@ -231,4 +256,25 @@ function shuffle(a) {
 
 function getRandom() {
   return Math.floor(Math.random() * allAlphabets.length);
+}
+
+function goodJob() {  // not used yet
+  var elem = document.getElementById('modal');
+  
+  var div1 = document.createElement('div');
+  div1.className = 'bg-modal';
+  // document.body.appendChild(div1);
+  elem.appendChild(div1);
+  var div2 = document.createElement('div');
+  div2.className = 'modal-content';
+  div1.appendChild(div2);
+
+  var p1 = document.createElement('p');
+  p1.className = 'p1';
+  p1.innerHTML = 'Good Job ! <br>You Earned 2 Tickets <br>Use Your Tickets To Reveal A Bonus Puzzle';
+  div1.appendChild(p1);
+  var butt = document.createElement('button');
+  butt.className = 'button';
+  butt.innerHTML = 'Click Me to See Puzzle';
+  div1.append(butt);
 }
