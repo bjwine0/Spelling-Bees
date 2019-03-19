@@ -61,7 +61,6 @@ new ImageAlph('Y', 'png');
 new ImageAlph('Z', 'png');
 
 
-
 function levelOne (name, ext) {
   this.name = name;
   this.ext = ext;
