@@ -2,6 +2,7 @@
 
 var getPicElem = document.getElementById('puzzle');
 var alphabetElem = document.getElementById('alphabet');
+var slots = document.getElementById('slots');
 var levelOneImg = ['car', 'star', 'dog'];
 console.log('levelOneImg', levelOneImg);
 var levelTwoImg = ['bubble', 'apple', 'dragon'];
@@ -131,52 +132,113 @@ function startFunction () {
   for (var i = 0; i < levelOnePics[0].name.length; i++) {
     word[i] = string.charAt(i);
     word[i] = word[i].toUpperCase();  // incase user unputs lowercase field data? 
+    
   }
+  wordCheck.push(word);
+  for ( i = 0; i < word.length; i++) {
+    var newSlots = document.createElement('li');
+    newSlots.className = word[i]; // assigned class name // had id name conflict
+    newSlot.push(newSlots);
+    console.log('slots', newSlots);
+    slots.appendChild(newSlots);
+
+  }
+
+  console.log('word', word);
   for (var j = 0; j < word.length; j++) {
     for( var k = 0; k < allAlphabets.length; k++) {
       if (word[j] === allAlphabets[k].name) {
         console.log('true');
         indexLoca[j] = (k);
         console.log('indexLocation', indexLoca);
+        break;
       }
     }
   }
   var currentTen = [];
-
+  
   for (var i = 0; i < 12 - indexLoca.length; i++) {
     currentTen[i] = getRandom();
   }
 
   var wordPlusRandom = indexLoca.concat(currentTen);
   imgString.push(wordPlusRandom);
-  console.log('curenttem', currentTen);
+  console.log('curentten', currentTen);
   console.log('wordPlusRandom', wordPlusRandom);
 
   var shuffled = shuffle(wordPlusRandom);
   console.log('shuffled', shuffled);
-
+  // debugger;
   for (var i = 0; i < shuffled.length; i++) {
 
   
     var imgElem = document.createElement('img');
+    
     imgElem.src = allAlphabets[shuffled[i]].filePath;
-    
+    imgElem.id = allAlphabets[shuffled[i]].name; 
+    filePath[i] = shuffled[i];
+    imgElem.addEventListener('click', click);
+    // filePath.push(imgElem.src);
     alphabetElem.appendChild(imgElem);
-    
+
   }
 
+  console.log('filepath', filePath);
+  console.log('imgString', imgString);
   
   startButtonBye();
   
 
   
 }
+var imgString = [];
+var filePath = [];  //  use for local storage
+var newSlot = [];
+var wordCheck =[];
 
-var imgString = [];  //  use for local storage
-console.log('imgstring', imgString);
+function click(event) {
+  debugger;
+  console.log('clicked', event.target.id);
+  for(var i = 0; i < filePath.length; i++) { // 12
+    if(event.target.id === wordCheck[0][i]) {
+      console.log('true', event.target.id, wordCheck[0][i]);
+      
+      
+      var elem = document.getElementById(event.target.id);
+      console.log('elem', elem);
+      elem.remove();
+      delete wordCheck[0][i];
+      console.log('wordcheck', wordCheck);
+      var list = document.getElementsByClassName(event.target.id);
+      console.log('list', list);
+      var newElem = document.createElement('img');
+      newElem = elem;
 
 
+      
 
+      console.log('newElem', newElem);
+      if (elem.id === newSlot[i].className);
+      console.log('true', elem.id, newSlot[i].className);
+      list[0].append(newElem);
+      // document.getElementsByClassName
+      // var getClass = document.get
+      // elem.remove();
+      list[0].classList.className.remove();
+
+      break;
+
+      // allProducts[i].click += 1;
+      // console.log(`${event.target.id} has ${allProducts[i].click};
+    }else{
+      console.log('false');
+    }
+  }
+  
+  
+  
+
+}
 
 
 
