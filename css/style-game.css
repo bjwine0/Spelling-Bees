@@ -242,3 +242,14 @@ top: 200px;
   position: absolute;
 }
 
+.background{
+  width: 500px;
+  height: 300px;
+  background-color: white;
+  border-radius: 4px;
+  text-align: center;
+  padding: 50px;
+  margin: 10px auto;
+  /* z-index: 2; */
+  position: absolute;
+}
