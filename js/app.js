@@ -274,6 +274,7 @@ function goodJob() { // not used yet
   p1.innerHTML = 'Good Job ! <br>You Earned 2 Tickets <br>Use Your Tickets To Reveal A Bonus Puzzle';
   div1.appendChild(p1);
   var butt = document.createElement('button');
+  butt.addEventListener('click', gif)
   butt.className = 'button';
   butt.innerHTML = 'Click Me to See Puzzle';
   div1.append(butt);
