@@ -128,7 +128,7 @@ document.getElementById('start').addEventListener('click', startFunction);
 // }
 
 function startFunction () {
-  debugger;
+  // debugger;
   for (var i = 0; i <= levelOnePics.length; i++) {
     var newElem = document.createElement('img');
     newElem.src = levelOnePics[i].filePath;
