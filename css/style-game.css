@@ -253,3 +253,27 @@ top: 200px;
   /* z-index: 2; */
   position: absolute;
 }
+
+#square{
+  color: red;
+}
+
+#square2{
+  color: green;
+}
+
+#square3{
+  color: blue;
+}
+
+#square4{
+  color: hotpink;
+}
+
+#square5{
+  color: purple;
+}
+
+#square6{
+  color: orange;
+}
