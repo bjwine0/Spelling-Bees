@@ -128,26 +128,26 @@ document.getElementById('start').addEventListener('click', startFunction);
 // }
 
 function startFunction () {
-  debugger;
+
   for (var i = 0; i <= levelOnePics.length; i++) {
     var newElem = document.createElement('img');
     newElem.src = levelOnePics[i].filePath;
     newElem.id = levelOnePics[i].name;
     getPicElem.appendChild(newElem);
-    
+
     var string = levelOnePics[i].name;
     var word =[];
     var indexLoca = [];
-  
+
     for (var i = 0; i < string.length; i++) {
       word[i] = string.charAt(i);
-      word[i] = word[i].toUpperCase();  
-    
+      word[i] = word[i].toUpperCase();
+
     }
     wordCheck.push(word);
     for ( i = 0; i < word.length; i++) {
       var newSlots = document.createElement('li');
-      newSlots.className = word[i]; 
+      newSlots.className = word[i];
       newSlot.push(newSlots);
       console.log('slots', newSlots);
       slots.appendChild(newSlots);
@@ -167,7 +167,7 @@ function startFunction () {
     }
   }
   var currentTen = [];
-  
+
   for (var i = 0; i < 12 - indexLoca.length; i++) {
     currentTen[i] = getRandom();
   }
@@ -183,9 +183,9 @@ function startFunction () {
   for (var i = 0; i < shuffled.length; i++) {
 
     var imgElem = document.createElement('img');
-  
+
     imgElem.src = allAlphabets[shuffled[i]].filePath;
-    imgElem.id = allAlphabets[shuffled[i]].name; 
+    imgElem.id = allAlphabets[shuffled[i]].name;
     filePath[i] = shuffled[i];
     imgElem.addEventListener('click', click);
     alphabetElem.appendChild(imgElem);
@@ -194,22 +194,22 @@ function startFunction () {
 
   console.log('filepath', filePath);
   console.log('imgString', imgString);
-  
+
   startButtonBye();
 }
 var imgString = [];
-var filePath = [];  //  use for local storage
+var filePath = []; //  use for local storage
 var newSlot = [];
 var wordCheck =[];
 var trueCount = 0;
 function click(event) {
-  debugger;
-  
+
+
   console.log('clicked', event.target.id);
   for(var i = 0; i < filePath.length; i++) { // 12
     if(event.target.id === wordCheck[0][i]) {
       console.log('true', event.target.id, wordCheck[0][i]);
-      
+
       trueCount += 1;
       var elem = document.getElementById(event.target.id);
       console.log('elem', elem);
@@ -233,12 +233,12 @@ function click(event) {
   }
 
   if (trueCount === 3){
-    console.log('true', trueCount); 
+    console.log('true', trueCount);
     goodJob();
   } else {
     console.log('false', trueCount);
   }
-  
+
 }
 
 
@@ -258,9 +258,9 @@ function getRandom() {
   return Math.floor(Math.random() * allAlphabets.length);
 }
 
-function goodJob() {  // not used yet
+function goodJob() { // not used yet
   var elem = document.getElementById('modal');
-  
+
   var div1 = document.createElement('div');
   div1.className = 'bg-modal';
   // document.body.appendChild(div1);
@@ -278,3 +278,273 @@ function goodJob() {  // not used yet
   butt.innerHTML = 'Click Me to See Puzzle';
   div1.append(butt);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function gif() {
+  var gif = document.createElement('img');
+  gif.className = 'hidden-img';
+
+  var background = document.createElement('div');
+  background.className = 'background';
+
+  var square = document.createElement('div');
+  square.id = 'square';
+  square.addEventListener('click', removeDiv);
+  console.log('square', event.target.id);
+
+
+  var square2 = document.createElement('div');
+  square2.id = 'square2';
+  square2.addEventListener('click', removeDiv);
+  console.log('square2', event.target.id);
+
+
+  var square3 = document.createElement('div');
+  square3.id = 'square3';
+  square3.addEventListener('click', removeDiv);
+  console.log('square3', event.target.id);
+
+
+  var square4 = document.createElement('div');
+  square4.id = 'square4';
+  square4.addEventListener('click', removeDiv);
+  console.log('square4', event.target.id);
+
+
+  var square5 = document.createElement('div');
+  square5.id = 'square5';
+  square5.addEventListener('click', removeDiv);
+  console.log('square5', event.target.id);
+
+
+  var square6 = document.createElement('div');
+  square6.id = 'square6';
+  square6.addEventListener('click', removeDiv);
+  console.log('square6', event.target.id);
+}
+
+
+function removeDiv () {
+  var div = document.getElementById('div');
+  div.parentNode.removeChild();
+  console.log('target', div);
+}
+
+gif();
