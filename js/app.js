@@ -198,17 +198,19 @@ function startFunction () {
 
   
   function pickLetters(){
+  debugger;
   var makePick = document.createElement('p');
   makePick.id='Pick';
   Pick.textContent = 'Pick Your Letters!';
   makePick.addEventListener('click', click);}
 
-  pickLetters(); 
+  // pickLetters();
 
 
 
   startButtonBye();
 }
+
 var imgString = [];
 var filePath = []; //  use for local storage
 var newSlot = [];
@@ -275,23 +277,31 @@ function goodJob() { // not used yet
 
   var div1 = document.createElement('div');
   div1.className = 'bg-modal';
+  div1.id = 'a';
   // document.body.appendChild(div1);
   elem.appendChild(div1);
   var div2 = document.createElement('div');
   div2.className = 'modal-content';
+  div2.id = 'b';
   div1.appendChild(div2);
 
   var p1 = document.createElement('p');
   p1.className = 'p1';
+  p1.id = 'p';
   p1.innerHTML = 'Good Job ! <br>You Earned 2 Tickets <br>Use Your Tickets To Reveal A Bonus Puzzle';
   div1.appendChild(p1);
   var butt = document.createElement('button');
   butt.addEventListener('click', gif);
   butt.className = 'button';
+  butt.id = 'but';
   butt.innerHTML = 'Click Me to See Puzzle';
   div1.append(butt);
 
 
+}
+
+function rem() {
+  var a = document.getElementsByName()
 }
 
 
@@ -514,14 +524,17 @@ function goodJob() { // not used yet
 
 function gif() {
   
-
-  var place = document.getElementById('modal');
+  rem();
+  var place = document.getElementById('b');
   
   var gif = document.createElement('img');
   gif.className = 'hidden-img';
 
-  var background = document.createElement('div');
-  background.className = 'background';
+  // var background = document.createElement('div');
+  // background.className = 'background';
+  gif.src = 'img/giphy.gif';
+  place.appendChild(gif);
+
 
   var square = document.createElement('div');
   square.id = 'square';
@@ -559,15 +572,22 @@ function gif() {
   console.log('square6', event.target.id);
 }
 
+//removes divs on click
+function removeDiv () {
+  var div = document.getElementById('div');
+  div.parentNode.removeChild();
+  console.log('target', div);
+}
+//function to remove paragraph and button
+function rem () {
+  var a = document.getElementById('p');
+  var b = document.getElementById('but');
+  a.remove();
+  b.remove();
+}
 
-// function removeDiv () {
-//   var div = document.getElementById('div');
-//   div.parentNode.removeChild();
-//   console.log('target', div);
-// }
 
 
 
 
-gif();
 

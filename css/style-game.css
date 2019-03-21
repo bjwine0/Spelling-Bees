@@ -196,7 +196,7 @@ div {
   padding-right: 5px;
   padding-top: 5px;
   padding-bottom: 5px;
-  background: black;
+  /* background: black; */
   font-family: 'Sniglet', cursive;
   color:  rgb(215, 228, 37);
   border-radius: 6px;
@@ -253,7 +253,7 @@ div {
   position: absolute;
 }
 
-.background{
+/* .background{
   width: 500px;
   height: 300px;
   background-color: white;
@@ -262,5 +262,10 @@ div {
   padding: 50px;
   margin: 10px auto;
   /* z-index: 2; */
-  position: absolute;
+  /* position: absolute;
+} */ 
+
+#hidden-img {
+  z-index: 10;
+
 }
