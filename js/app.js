@@ -128,9 +128,9 @@ document.getElementById('start').addEventListener('click', startFunction);
 //     startFunction();
 //   }
 // }
-
+var strings =[];
 function startFunction () {
-
+  debugger;
   for (var i = 0; i <= levelOnePics.length; i++) {
     var newElem = document.createElement('img');
     newElem.src = levelOnePics[i].filePath;
@@ -138,6 +138,7 @@ function startFunction () {
     getPicElem.appendChild(newElem);
 
     var string = levelOnePics[i].name;
+    strings.push(string);
     var word =[];
     var indexLoca = [];
 
@@ -167,41 +168,42 @@ function startFunction () {
         }
       }
     }
-  }
-  var currentTen = [];
+  // }
+    var currentTen = [];
 
-  for (var i = 0; i < 12 - indexLoca.length; i++) {
-    currentTen[i] = getRandom();
-  }
+    for (var i = 0; i < 12 - indexLoca.length; i++) {
+      currentTen[i] = getRandom();
+    }
 
-  var wordPlusRandom = indexLoca.concat(currentTen);
-  imgString.push(wordPlusRandom);
-  console.log('curentten', currentTen);
-  console.log('wordPlusRandom', wordPlusRandom);
+    var wordPlusRandom = indexLoca.concat(currentTen);
+    imgString.push(wordPlusRandom);
+    console.log('curentten', currentTen);
+    console.log('wordPlusRandom', wordPlusRandom);
 
-  var shuffled = shuffle(wordPlusRandom);
-  console.log('shuffled', shuffled);
+    var shuffled = shuffle(wordPlusRandom);
+    console.log('shuffled', shuffled);
   // debugger;
-  for (var i = 0; i < shuffled.length; i++) {
+    for (var i = 0; i < shuffled.length; i++) {
 
-    var imgElem = document.createElement('img');
+      var imgElem = document.createElement('img');
 
-    imgElem.src = allAlphabets[shuffled[i]].filePath;
-    imgElem.id = allAlphabets[shuffled[i]].name;
-    filePath[i] = shuffled[i];
-    imgElem.addEventListener('click', click);
-    alphabetElem.appendChild(imgElem);
+      imgElem.src = allAlphabets[shuffled[i]].filePath;
+      imgElem.id = allAlphabets[shuffled[i]].name;
+      filePath[i] = shuffled[i];
+      imgElem.addEventListener('click', click);
+      alphabetElem.appendChild(imgElem);
 
-  }
-
-  console.log('filepath', filePath);
-  console.log('imgString', imgString);
+    }
+  
+    console.log('filepath', filePath);
+    console.log('imgString', imgString);
 
   
 
-  pickLetters();
+   pickLetters();
 
-  startButtonBye();
+   startButtonBye();
+  }
 }
 
 function pickLetters(){
@@ -212,14 +214,6 @@ function pickLetters(){
 
 }
 
-// function pickLetters(){
-
-//   var makePick = document.createElement('p');
-//   makePick.id='Pick';
-//   makePick.textContent = 'Pick Your Letters!';
-//   // makePick.addEventListener('click', click);}
-// }
-// // // pickLetters();
 
 
 var imgString = [];
@@ -227,9 +221,10 @@ var filePath = []; //  use for local storage
 var newSlot = [];
 var wordCheck =[];
 var trueCount = 0;
+
 function click(event) {
 
-
+  debugger;
   console.log('clicked', event.target.id);
   for(var i = 0; i < filePath.length; i++) { // 12
     if(event.target.id === wordCheck[0][i]) {
@@ -256,10 +251,12 @@ function click(event) {
     }
     console.log('count', trueCount);
   }
-
-  if (trueCount === 3){
+  
+  if (trueCount === wordCheck[0].length){
     console.log('true', trueCount);
+
     goodJob();
+    
   } else {
     console.log('false', trueCount);
   }
@@ -299,21 +296,21 @@ function goodJob() { // not used yet
   var p1 = document.createElement('p');
   p1.className = 'p1';
   p1.id = 'p';
-  p1.innerHTML = 'Good Job ! <br>You Earned 2 Tickets <br>Use Your Tickets To Reveal A Bonus Puzzle';
+  p1.innerHTML = `Good Job ! <br>You Spelled <br> ${strings}`;
   div1.appendChild(p1);
+
+  
   var butt = document.createElement('button');
   butt.addEventListener('click', gif);
   butt.className = 'button';
   butt.id = 'but';
-  butt.innerHTML = 'Click Me to See Puzzle';
+  butt.innerHTML = 'Bonus Puzzle';
   div1.append(butt);
 
 
 }
 
-function rem() {
-  var a = document.getElementsByName();
-}
+
 
 
 
@@ -542,8 +539,7 @@ function gif() {
   var gif = document.createElement('img');
   gif.className = 'hidden-img';
 
-  // var background = document.createElement('div');
-  // background.className = 'background';
+  
   gif.src = 'img/giphy.gif';
   place.appendChild(gif);
 
@@ -551,44 +547,139 @@ function gif() {
   var square = document.createElement('div');
   square.id = 'square';
   square.addEventListener('click', removeDiv);
+  var span = document.createElement('span');
+  span.id = 'u';
+  square.appendChild(span);
+  span = document.createElement('span');
+  span.id = 'v';
+  square.appendChild(span);
+  span = document.createElement('span');
+  span.id = 'w';
+  square.appendChild(span);
+  span = document.createElement('span');
+  span.id = 'x';
+  square.appendChild(span);
+
   console.log('square', event.target.id);
+  place.appendChild(square);
 
 
   var square2 = document.createElement('div');
   square2.id = 'square2';
   square2.addEventListener('click', removeDiv);
+  span = document.createElement('span');
+  span.id = 'uu';
+  square2.appendChild(span);
+  span = document.createElement('span');
+  span.id = 'vv';
+  square2.appendChild(span);
+  span = document.createElement('span');
+  span.id = 'ww';
+  square2.appendChild(span);
+  span = document.createElement('span');
+  span.id = 'xx';
+  square2.appendChild(span);
+
   console.log('square2', event.target.id);
+  place.appendChild(square2);
 
 
   var square3 = document.createElement('div');
   square3.id = 'square3';
   square3.addEventListener('click', removeDiv);
+  span = document.createElement('span');
+  span.id = 'uu';
+  square3.appendChild(span);
+  span = document.createElement('span');
+  span.id = 'vv';
+  square3.appendChild(span);
+  span = document.createElement('span');
+  span.id = 'ww';
+  square3.appendChild(span);
+  span = document.createElement('span');
+  span.id = 'xx';
+  square3.appendChild(span);
+
   console.log('square3', event.target.id);
+  place.appendChild(square3);
 
 
   var square4 = document.createElement('div');
   square4.id = 'square4';
   square4.addEventListener('click', removeDiv);
+  span = document.createElement('span');
+  span.id = 'uu';
+  square4.appendChild(span);
+  span = document.createElement('span');
+  span.id = 'vv';
+  square4.appendChild(span);
+  span = document.createElement('span');
+  span.id = 'ww';
+  square4.appendChild(span);
+  span = document.createElement('span');
+  span.id = 'xx';
+  square4.appendChild(span);
+
   console.log('square4', event.target.id);
+  place.appendChild(square4);
 
 
   var square5 = document.createElement('div');
   square5.id = 'square5';
   square5.addEventListener('click', removeDiv);
+  span = document.createElement('span');
+  span.id = 'uu';
+  square5.appendChild(span);
+  span = document.createElement('span');
+  span.id = 'vv';
+  square5.appendChild(span);
+  span = document.createElement('span');
+  span.id = 'ww';
+  square5.appendChild(span);
+  span = document.createElement('span');
+  span.id = 'xx';
+  square5.appendChild(span);
+
   console.log('square5', event.target.id);
+  place.appendChild(square5);
 
 
   var square6 = document.createElement('div');
   square6.id = 'square6';
   square6.addEventListener('click', removeDiv);
+  span = document.createElement('span');
+  span.id = 'uu';
+  square6.appendChild(span);
+  span = document.createElement('span');
+  span.id = 'vv';
+  square6.appendChild(span);
+  span = document.createElement('span');
+  span.id = 'ww';
+  square6.appendChild(span);
+  span = document.createElement('span');
+  span.id = 'xx';
+  square6.appendChild(span);
+
   console.log('square6', event.target.id);
+  place.appendChild(square6);
+
+
 }
 
 //removes divs on click
 function removeDiv () {
-  var div = document.getElementById('div');
-  div.parentNode.removeChild();
-  console.log('target', div);
+  
+  var fadeTarget = document.getElementById(event.target.id);
+  var fadeEffect = setInterval(function () {
+    if (!fadeTarget.style.opacity) {
+      fadeTarget.style.opacity = 1;
+    }
+    if (fadeTarget.style.opacity > 0) {
+      fadeTarget.style.opacity -= 0.1;
+    } else {
+      clearInterval(fadeEffect);
+    }
+  }, 200);
 }
 //function to remove paragraph and button
 function rem () {
