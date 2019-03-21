@@ -1,3 +1,4 @@
+
 header {
   position: relative;
   background: rgb(215, 228, 37);
@@ -32,7 +33,7 @@ header {
 li {
   margin-bottom: 10px;
 }
-#addInfo {
+#Submit {
   position: absolute;
   width: 100px;
   padding-left: 25px;
@@ -41,9 +42,34 @@ li {
   padding-bottom: 25px;
   right: 950px;
   top: 550px;
+  font-family: 'Sniglet', cursive;
+}
+input[type=submit] {
+  padding:5px 15px; 
+  background: black;
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+  font-family: 'Sniglet', cursive;
+  color:  rgb(215, 228, 37);
+  font-size: 20px;
 }
 #arrays {
   position: absolute;
   top: 700px;
   left: 200px;
+  font-family: 'Sniglet', cursive;
+}
+#wordInput {
+  position: absolute;
+  left: 800px;
+  top: 250px;
+  font-family: 'Sniglet', cursive;
+}
+#pictureInput {
+  position: absolute;
+  right: 200px;
+  top: 700px;
+  font-family: 'Sniglet', cursive;
 }
