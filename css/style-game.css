@@ -182,21 +182,34 @@ header {
 }
 #Pick {
   position: absolute;
-  /* width: 250px;
-  height: 100px; */
+  width: 250px;
+  height: 100px;
+  /* text-align: center;
+  background: black;
+  font-family: 'Sniglet', cursive;
+  color:  rgb(215, 228, 37); */
+  border-radius: 6px;
+  border-width: 10px;
+  left: 720px;
+  top: 660px;
+  /* font-size: 50px; */
+  /* padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px; */
+}
+#Pick p {
+  font-size: 25px;
   text-align: center;
   background: black;
   font-family: 'Sniglet', cursive;
   color:  rgb(215, 228, 37);
   border-radius: 6px;
   border-width: 10px;
-  left: 660px;
-  top: 660px;
-  font-size: 50px;
-  /* padding-left: 5px;
+  padding-left: 5px;
   padding-right: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px; */
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 /* .modal {
   width: 100%;
