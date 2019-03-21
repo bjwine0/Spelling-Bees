@@ -73,15 +73,7 @@ header {
 
 
 
-div {
-  /* margin-bottom: 50px; */
-  /* width: 700px; */
-  /* margin: 50px auto;
-  border-radius: 25px;
-  /* opacity: 0.5; */
-  /* text-align: center;
-  position: relative; */ 
-}
+
 #slots {
   
   position: absolute;
@@ -190,19 +182,21 @@ div {
 }
 #Pick {
   position: absolute;
-  width: 250px;
+  /* width: 250px;
+  height: 100px; */
   text-align: center;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  /* background: black; */
+  background: black;
   font-family: 'Sniglet', cursive;
   color:  rgb(215, 228, 37);
   border-radius: 6px;
-  left: 710px;
+  border-width: 10px;
+  left: 660px;
   top: 660px;
-  font-size: 25px;
+  font-size: 50px;
+  /* padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px; */
 }
 /* .modal {
   width: 100%;

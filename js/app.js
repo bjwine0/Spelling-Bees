@@ -129,7 +129,15 @@ document.getElementById('start').addEventListener('click', startFunction);
 // }
 
 function startFunction () {
-
+  
+  function pickLetters(){
+  var para = document.createElement("P");                     
+  var t = document.createTextNode("Pick Your Letters!");      
+  para.appendChild(t);                                          
+  document.getElementById("Pick").appendChild(para);}
+  
+  pickLetters();
+  
   for (var i = 0; i <= levelOnePics.length; i++) {
     var newElem = document.createElement('img');
     newElem.src = levelOnePics[i].filePath;
@@ -197,19 +205,12 @@ function startFunction () {
   console.log('imgString', imgString);
 
   
-  function pickLetters(){
-  debugger;
-  var makePick = document.createElement('p');
-  makePick.id='Pick';
-  Pick.textContent = 'Pick Your Letters!';
-  makePick.addEventListener('click', click);}
-
-  // pickLetters();
-
-
-
+  
+  
+  
   startButtonBye();
 }
+
 
 var imgString = [];
 var filePath = []; //  use for local storage
@@ -217,13 +218,13 @@ var newSlot = [];
 var wordCheck =[];
 var trueCount = 0;
 function click(event) {
-
-
+  
+  
   console.log('clicked', event.target.id);
   for(var i = 0; i < filePath.length; i++) { // 12
     if(event.target.id === wordCheck[0][i]) {
       console.log('true', event.target.id, wordCheck[0][i]);
-
+      
       trueCount += 1;
       var elem = document.getElementById(event.target.id);
       console.log('elem', elem);
