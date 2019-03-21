@@ -32,3 +32,18 @@ header {
 li {
   margin-bottom: 10px;
 }
+#addInfo {
+  position: absolute;
+  width: 100px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  right: 950px;
+  top: 550px;
+}
+#arrays {
+  position: absolute;
+  top: 700px;
+  left: 200px;
+}
