@@ -188,34 +188,32 @@ div {
   width: 350px;
   height: 250px;
 }
-#Pick {
+#r {
   position: absolute;
   width: 250px;
   text-align: center;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  /* background: black; */
+  
+  background: black;
   font-family: 'Sniglet', cursive;
   color:  rgb(215, 228, 37);
   border-radius: 6px;
   left: 710px;
   top: 660px;
   font-size: 25px;
+
+
 }
-/* .modal {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  
-  position: absolute;
-  top: 0;
-  display: flex;
-  justify-content:  center;
-  align-items: center; 
-  z-index: 1;
-} */
+.q{
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+
+
+}
+
+
 
 .bg-modal {
   width: 100%;
@@ -238,8 +236,9 @@ div {
   text-align: center;
   padding: 50px;
   margin: 10px auto;
-  /* z-index: 2; */
+  z-index: 2;
   position: absolute;
+  /* position:  */
 }
 
 .button {
@@ -253,19 +252,57 @@ div {
   position: absolute;
 }
 
-/* .background{
-  width: 500px;
-  height: 300px;
-  background-color: white;
-  border-radius: 4px;
-  text-align: center;
-  padding: 50px;
-  margin: 10px auto;
-  /* z-index: 2; */
-  /* position: absolute;
-} */ 
+
 
 #hidden-img {
   z-index: 10;
 
 }
+
+
+
+
+
+
+
+
+/* #bee-intro {
+  z-index: 30;
+  height: 200px;
+  width: 200px;
+  /* position: absolute;
+  border-radius: 50%; 
+  margin-bottom: 200px;
+}
+
+#form{
+  z-index: 40;
+  background-color: black;
+  position: absolute;
+  top: 493px;
+}
+
+#p-intro {
+  z-index: 40;
+  position: absolute;
+
+}
+
+#button-intro {
+  margin: 20px auto;
+  z-index: 4;
+  top: 560px;
+  position: absolute;
+  
+}
+
+.close{
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 40px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}  */
+
+

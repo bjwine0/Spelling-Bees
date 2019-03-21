@@ -95,6 +95,7 @@ new levelThree('Strawberry', 'png');
 new levelThree('Butterfly', 'png');
 
 
+
 function removeButton() {
   var elem = document.getElementById('replay');
   elem.parentNode.removeChild(elem);
@@ -197,19 +198,29 @@ function startFunction () {
   console.log('imgString', imgString);
 
   
-  function pickLetters(){
-  debugger;
-  var makePick = document.createElement('p');
-  makePick.id='Pick';
-  Pick.textContent = 'Pick Your Letters!';
-  makePick.addEventListener('click', click);}
 
-  // pickLetters();
-
-
+  pickLetters();
 
   startButtonBye();
 }
+
+function pickLetters(){
+  debugger;
+  var r = document.getElementById('r');
+  r.innerHTML = 'Pick Your Letters!';
+  r.className = 'q';
+
+}
+
+// function pickLetters(){
+
+//   var makePick = document.createElement('p');
+//   makePick.id='Pick';
+//   makePick.textContent = 'Pick Your Letters!';
+//   // makePick.addEventListener('click', click);}
+// }
+// // // pickLetters();
+
 
 var imgString = [];
 var filePath = []; //  use for local storage
@@ -301,7 +312,7 @@ function goodJob() { // not used yet
 }
 
 function rem() {
-  var a = document.getElementsByName()
+  var a = document.getElementsByName();
 }
 
 
@@ -525,6 +536,7 @@ function rem() {
 function gif() {
   
   rem();
+
   var place = document.getElementById('b');
   
   var gif = document.createElement('img');
