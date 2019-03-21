@@ -274,7 +274,7 @@ function goodJob() { // not used yet
   p1.innerHTML = 'Good Job ! <br>You Earned 2 Tickets <br>Use Your Tickets To Reveal A Bonus Puzzle';
   div1.appendChild(p1);
   var butt = document.createElement('button');
-  butt.addEventListener('click', gif)
+  butt.addEventListener('click', gif);
   butt.className = 'button';
   butt.innerHTML = 'Click Me to See Puzzle';
   div1.append(butt);
@@ -499,6 +499,10 @@ function goodJob() { // not used yet
 
 
 function gif() {
+  
+
+  var place = document.getElementById('modal');
+  
   var gif = document.createElement('img');
   gif.className = 'hidden-img';
 
@@ -542,10 +546,10 @@ function gif() {
 }
 
 
-function removeDiv () {
-  var div = document.getElementById('div');
-  div.parentNode.removeChild();
-  console.log('target', div);
-}
+// function removeDiv () {
+//   var div = document.getElementById('div');
+//   div.parentNode.removeChild();
+//   console.log('target', div);
+// }
 
-gif();
+
