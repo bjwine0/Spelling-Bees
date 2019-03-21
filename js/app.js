@@ -1,3 +1,4 @@
+
 'use strict';
 
 var getPicElem = document.getElementById('level-img');
@@ -195,6 +196,17 @@ function startFunction () {
   console.log('filepath', filePath);
   console.log('imgString', imgString);
 
+  
+  function pickLetters(){
+  var makePick = document.createElement('p');
+  makePick.id='Pick';
+  Pick.textContent = 'Pick Your Letters!';
+  makePick.addEventListener('click', click);}
+
+  pickLetters(); 
+
+
+
   startButtonBye();
 }
 var imgString = [];
@@ -278,6 +290,8 @@ function goodJob() { // not used yet
   butt.className = 'button';
   butt.innerHTML = 'Click Me to See Puzzle';
   div1.append(butt);
+
+
 }
 
 
@@ -552,4 +566,8 @@ function gif() {
 //   console.log('target', div);
 // }
 
+
+
+
+gif();
 

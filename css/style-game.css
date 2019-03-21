@@ -1,8 +1,9 @@
-#page2 {
+body {
   
   margin: 0;
   background-position: center;
   background: fixed;
+  background-repeat: no-repeat;
   
 }
 
@@ -17,8 +18,9 @@ header {
   border-right-width: 5px;
   height: 150px;
   border-radius: 25px;
+  font-family: 'Sniglet', cursive;
+} 
 
-}
 
 .bee {
   background:none;
@@ -32,29 +34,41 @@ header {
   left: 215px;
   top: 35px;
 }
-ul {
+#links {
   float: right;
   margin-top: 25px;
   margin-right: 20px;
 }
-li {
+#links li {
   margin-bottom: 10px;
   font-family: 'Sniglet', cursive;
 }
-
-#alphabet {
+#alphabet{
+  position: absolute;
+  left: 350px;
+  bottom: 100px;
+  }
+  #alphabet li{
+    display: inline-block;
+    margin-left: 20px;
+  }
+  #alphabet img{
+    width: 75px;
+    height: 100px;
+  }
+/* #alphabet {
   /* position: absolute; */
-  display: inline-block;
+  /* display: inline-block;
   margin-top: 400px;
   width: 1100px;
-}
+} */ 
 
-ul img {
+/* ul img {
   margin-right: 30px;
   width: 80px;
   height: 80px;
   
-}
+} */
 
 
 
@@ -71,11 +85,11 @@ div {
 #slots {
   
   position: absolute;
-  left: 906px;
+  left: 650px;
+  top: 500px;
   display: flex;
   margin-right: 10px;
   width: 1000px;
-  top: 500px;
 }
 
 #slots li {
@@ -85,9 +99,11 @@ div {
   border-style: solid;
   border-bottom-color: black;
   border-bottom-width: 10px;
-   
-  
-  
+  margin-left: 35px;
+}
+#slots img{
+  width: 80px;
+  height: 80px;
 }
 
 #one {
@@ -100,19 +116,15 @@ div {
   color: rgb(52, 56, 29);
   
 }
-.logoRules {
+#rules {
   position: absolute;
   display: block;
   width: 250px;
   height: 400px;
   margin-left: 20px;
-  margin-top: 100px;
+  margin-top: 180px;
   font-size: 30px;
   font-family: 'Sniglet', cursive;
-}
-#rules {
-  margin-top:20px;
-
 }
 
 #puzzle {
@@ -125,7 +137,7 @@ div {
 
 #spellPic {
   position: relative;
-  top: 120px;
+  top: 20px;
   left: 600px;
 }
 
@@ -139,31 +151,7 @@ div {
   display: inline-block;
 }
 
-#Pick {
-  position: relative;
-  width: 250px;
-  text-align: center;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  background: black;
-  font-family: 'Sniglet', cursive;
-  color:  rgb(215, 228, 37);
-  border-radius: 6px;
-  left: 690px;
-  top: 200px;
-  font-size: 25px;
-}
-#alphabet{
-position:relative;
-right: 300px;
-top: 200px;
-}
-#alphabet li{
-  display: inline-block;
-  margin-left: 20px;
-}
+
 .goal {
   position: absolute;
   top: 300px;
@@ -175,23 +163,46 @@ top: 200px;
 
 #start {
   position: absolute;
-  left: 910px;
-  top: 550px;
+  left: 600px;
+  top: 480px;
   margin-right: 100px;
   margin-left: 100px;
-  border-bottom-width: 50px;
-  border-top-width: 50px;
-  border-left-width: 50px;
-  border-right-width: 50px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 10px;
+  font-size: 30px;
+  font-family: 'Sniglet', cursive;
+  color:  rgb(215, 228, 37);
+  background: black;
+  
 }
 
-#Car {
-  
-  width: 450px;
-  height: 300px;
+#level-img {
   position: absolute;
-  left: 800px;
-  top: 194px;
+  left: 650px;
+  top: 200px;
+}
+#level-img img {
+  width: 350px;
+  height: 250px;
+}
+#Pick {
+  position: absolute;
+  width: 250px;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: black;
+  font-family: 'Sniglet', cursive;
+  color:  rgb(215, 228, 37);
+  border-radius: 6px;
+  left: 710px;
+  top: 660px;
+  font-size: 25px;
 }
 /* .modal {
   width: 100%;
