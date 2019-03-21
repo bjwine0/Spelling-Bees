@@ -195,6 +195,7 @@ function startFunction () {
 
   console.log('filepath', filePath);
   console.log('imgString', imgString);
+
   
   function pickLetters(){
   var makePick = document.createElement('p');
@@ -203,6 +204,9 @@ function startFunction () {
   makePick.addEventListener('click', click);}
 
   pickLetters(); 
+
+
+
   startButtonBye();
 }
 var imgString = [];
@@ -286,4 +290,277 @@ function goodJob() { // not used yet
   butt.className = 'button';
   butt.innerHTML = 'Click Me to See Puzzle';
   div1.append(butt);
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function gif() {
+  var gif = document.createElement('img');
+  gif.className = 'hidden-img';
+
+  var background = document.createElement('div');
+  background.className = 'background';
+
+  var square = document.createElement('div');
+  square.id = 'square';
+  square.addEventListener('click', removeDiv);
+  console.log('square', event.target.id);
+
+
+  var square2 = document.createElement('div');
+  square2.id = 'square2';
+  square2.addEventListener('click', removeDiv);
+  console.log('square2', event.target.id);
+
+
+  var square3 = document.createElement('div');
+  square3.id = 'square3';
+  square3.addEventListener('click', removeDiv);
+  console.log('square3', event.target.id);
+
+
+  var square4 = document.createElement('div');
+  square4.id = 'square4';
+  square4.addEventListener('click', removeDiv);
+  console.log('square4', event.target.id);
+
+
+  var square5 = document.createElement('div');
+  square5.id = 'square5';
+  square5.addEventListener('click', removeDiv);
+  console.log('square5', event.target.id);
+
+
+  var square6 = document.createElement('div');
+  square6.id = 'square6';
+  square6.addEventListener('click', removeDiv);
+  console.log('square6', event.target.id);
+}
+
+
+function removeDiv () {
+  var div = document.getElementById('div');
+  div.parentNode.removeChild();
+  console.log('target', div);
+}
+
+gif();
+
