@@ -137,6 +137,31 @@ function startFunction () {
   document.getElementById("Pick").appendChild(para);}
   
   pickLetters();
+
+  function makeBanner(){
+    var img = document.createElement("img");
+    img.src = "img/letterScroll.png";
+    var src = document.getElementById("letterScroll");
+    src.appendChild(img);}
+    
+    makeBanner();
+
+    function points(){  //this will need to be called outside after we have our finish rounds counter setup. just here as a shell for fill
+      var para = document.createElement("P");                     
+      var t = document.createTextNode("Puzzle Points =");      
+      para.appendChild(t);                                          
+      document.getElementById("goal").appendChild(para);}
+      
+      points();
+
+    function makeTicket(){
+      var img = document.createElement("img");
+      img.src = "img/ticket.jpeg";
+      var src = document.getElementById("ticket");
+      src.appendChild(img);}
+      
+      makeTicket();
+  
   
   for (var i = 0; i <= levelOnePics.length; i++) {
     var newElem = document.createElement('img');
