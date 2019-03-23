@@ -19,13 +19,20 @@ console.log('leveltwo', levelTwoPics);
 var levelThreePics = [];
 console.log('level3', levelThreePics);
 
+var levels = {
+  one: [],
+  two: [],
+  three: [],
+};
+
+console.log('levels', levels);
+
 
 
 function ImageAlph(name, ext) {
   this.name = name;
   this.ext = ext;
   this.filePath = `img/${name}.${ext}`;
-  this.clicks = 0;
   allAlphabets.push(this);
 }
 
@@ -61,8 +68,7 @@ function levelOne (name, ext) {
   this.name = name;
   this.ext = ext;
   this.filePath = `img/${name}.${ext}`;
-  this.clicks = 0;
-  levelOnePics.push(this);
+  levels.one.push(this);
 }
 
 new levelOne('Car', 'png');
@@ -74,8 +80,7 @@ function levelTwo (name, ext) {
   this.name = name;
   this.ext = ext;
   this.filePath = `img/${name}.${ext}`;
-  this.clicks = 0;
-  levelTwoPics.push(this);
+  levels.two.push(this);
 }
 
 new levelTwo('Apple', 'png');
@@ -86,8 +91,7 @@ function levelThree (name, ext) {
   this.name = name;
   this.ext = ext;
   this.filePath = `img/${name}.${ext}`;
-  this.clicks = 0;
-  levelThreePics.push(this);
+  levels.three.push(this);
 }
 
 new levelThree('Elephant', 'png');
@@ -96,123 +100,186 @@ new levelThree('Butterfly', 'png');
 
 
 
-function removeButton() {
-  var elem = document.getElementById('replay');
-  elem.parentNode.removeChild(elem);
-}
-removeButton();
-
-function recallButton() {
-  var element = document.getElementById('buttons');
-  var elem = document.createElement('button');
-  element.appendChild(elem);
-}
-//***********Recall button work */
-
-
 function startButtonBye () {
   var elem = document.getElementById('start');
-  elem.parentNode.removeChild(elem);
+  if (elem === null) {
+    console.log('true');
+    
+  }else{
+    elem.parentNode.removeChild(elem);
+  }
 
 }
 
 document.getElementById('start').addEventListener('click', startFunction);
 
-// function levelRotate () {
-//   debugger
-//   for (var i = 0; i <= levelOnePics.length; i++) {
-//     var newElem = document.createElement('img');
-//     newElem.src = levelOnePics[i].filePath;
-//     newElem.id = levelOnePics[i].name;
-//     getPicElem.appendChild(newElem);
-//     startFunction();
-//   }
-// }
-var strings =[];
-function startFunction () {
-  debugger;
-  for (var i = 0; i <= levelOnePics.length; i++) {
-    var newElem = document.createElement('img');
-    newElem.src = levelOnePics[i].filePath;
-    newElem.id = levelOnePics[i].name;
-    getPicElem.appendChild(newElem);
 
-    var string = levelOnePics[i].name;
-    strings.push(string);
-    var word =[];
-    var indexLoca = [];
 
-    for (var i = 0; i < string.length; i++) {
-      word[i] = string.charAt(i);
-      word[i] = word[i].toUpperCase();
 
-    }
-    wordCheck.push(word);
-    for ( i = 0; i < word.length; i++) {
-      var newSlots = document.createElement('li');
-      newSlots.className = word[i];
-      newSlot.push(newSlots);
-      console.log('slots', newSlots);
-      slots.appendChild(newSlots);
-
-    }
-
-    console.log('word', word);
-    for (var j = 0; j < word.length; j++) {
-      for( var k = 0; k < allAlphabets.length; k++) {
-        if (word[j] === allAlphabets[k].name) {
-          console.log('true');
-          indexLoca[j] = (k);
-          console.log('indexLocation', indexLoca);
-          break;
-        }
-      }
-    }
-  // }
-    var currentTen = [];
-
-    for (var i = 0; i < 12 - indexLoca.length; i++) {
-      currentTen[i] = getRandom();
-    }
-
-    var wordPlusRandom = indexLoca.concat(currentTen);
-    imgString.push(wordPlusRandom);
-    console.log('curentten', currentTen);
-    console.log('wordPlusRandom', wordPlusRandom);
-
-    var shuffled = shuffle(wordPlusRandom);
-    console.log('shuffled', shuffled);
-  // debugger;
-    for (var i = 0; i < shuffled.length; i++) {
-
-      var imgElem = document.createElement('img');
-
-      imgElem.src = allAlphabets[shuffled[i]].filePath;
-      imgElem.id = allAlphabets[shuffled[i]].name;
-      filePath[i] = shuffled[i];
-      imgElem.addEventListener('click', click);
-      alphabetElem.appendChild(imgElem);
-
-    }
-  
-    console.log('filepath', filePath);
-    console.log('imgString', imgString);
-
-  
-
-   pickLetters();
-
-   startButtonBye();
-  }
+function randWord() {
+  return Math.floor(Math.random() * levels.one.length);
 }
 
-function pickLetters(){
+var viewedImage = [];
+var strings = '';
+function startFunction () {
   debugger;
+  var z = document.getElementsByClassName('z');
+  var zz = document.getElementsByClassName('done');
+  console.log(z);
+  if (z.length === 0) {
+    console.log('true');
+
+  }else {
+    for (var i = z.length - 1; i >= 0; --i) {
+      z[i].remove();
+      
+    }
+    // elem.remove();
+    // elem.parentNode.remove();
+  }
+  if (zz.length === 0) {
+    console.log('true');
+
+  }else {
+    for ( i = zz.length - 1; i >= 0; --i) {
+      zz[i].remove();
+      
+    }
+    // elem.remove();
+    // elem.parentNode.remove();
+  }
+  
+  var currentImage = [];
+  debugger;
+  currentImage[0] = randWord();
+  while (viewedImage.indexOf(currentImage[0]) !== -1) {
+    currentImage[0] = randWord();
+
+    // viewedImage = currentImage.clone();
+    
+  }
+  viewedImage = currentImage;
+  // for (var i =0; i < levels.one.length; i++){
+  //   debugger;
+  // viewedImage[i] += currentImage;
+  // };
+  console.log('currentimage', currentImage);
+  console.log('viewedimage', viewedImage);
+  var newElem = document.createElement('img');
+  newElem.src = levels.one[currentImage].filePath;
+  newElem.id = levels.one[currentImage].name;
+  newElem.className = 'z';
+  getPicElem.appendChild(newElem);
+
+
+  var string = levels.one[currentImage].name;
+
+  strings = string;
+  var word =[];
+  var indexLoca = [];
+
+  for (var i = 0; i < string.length; i++) {
+    word[i] = string.charAt(i);
+    word[i] = word[i].toUpperCase();
+
+  }
+  wordCheck.push(word);
+  for ( i = 0; i < word.length; i++) {
+    var newSlots = document.createElement('li');
+    newSlots.className = word[i];
+    // newSlots.className += 'z';
+    newSlots.id = 'z';
+    newSlot.push(newSlots);
+    console.log('slots', newSlots);
+    slots.appendChild(newSlots);
+
+  }
+
+  console.log('word', word);
+  for (var j = 0; j < word.length; j++) {
+    for( var k = 0; k < allAlphabets.length; k++) {
+      if (word[j] === allAlphabets[k].name) {
+        console.log('true');
+        indexLoca[j] = (k);
+        console.log('indexLocation', indexLoca);
+        break;
+      }
+    }
+  }
+
+  var currentTen = [];
+
+  for (var i = 0; i < 12 - indexLoca.length; i++) {
+    currentTen[i] = getRandom();
+  }
+
+  var wordPlusRandom = indexLoca.concat(currentTen);
+  imgString.push(wordPlusRandom);
+  console.log('curentten', currentTen);
+  console.log('wordPlusRandom', wordPlusRandom);
+
+  var shuffled = shuffle(wordPlusRandom);
+  console.log('shuffled', shuffled);
+  // debugger;
+  for (var i = 0; i < shuffled.length; i++) {
+
+    var imgElem = document.createElement('img');
+
+    imgElem.src = allAlphabets[shuffled[i]].filePath;
+    imgElem.id = allAlphabets[shuffled[i]].name;
+    imgElem.className = 'z';
+    filePath[i] = shuffled[i];
+    imgElem.addEventListener('click', click);
+    alphabetElem.appendChild(imgElem);
+
+  }
+  
+  console.log('filepath', filePath);
+  console.log('imgString', imgString);
+
   var r = document.getElementById('r');
   r.innerHTML = 'Pick Your Letters!';
   r.className = 'q';
 
+  debugger;
+  
+  if (typeof(element) != 'undefined' && element != null) {
+    console.log('true');
+    
+  }else{
+    startButtonBye();
+  }
+  
+  
 }
+    
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+// function pickLetters(){
+//   debugger;
+//   var r = document.getElementById('r');
+//   r.innerHTML = 'Pick Your Letters!';
+//   r.className = 'q';
+
+// }
 
 
 
@@ -222,10 +289,10 @@ var newSlot = [];
 var wordCheck =[];
 var trueCount = 0;
 
-function click(event) {
+var click = function(event) {
 
   debugger;
-  console.log('clicked', event.target.id);
+  // console.log('clicked', event.target.id);
   for(var i = 0; i < filePath.length; i++) { // 12
     if(event.target.id === wordCheck[0][i]) {
       console.log('true', event.target.id, wordCheck[0][i]);
@@ -235,6 +302,7 @@ function click(event) {
       console.log('elem', elem);
       elem.remove();
       delete wordCheck[0][i];
+      // wordCheck[0].splice(i, 1);
       console.log('wordcheck', wordCheck);
       var list = document.getElementsByClassName(event.target.id);
       console.log('list', list);
@@ -242,12 +310,19 @@ function click(event) {
       newElem = elem;
       console.log('newElem', newElem);
 
+    
+
       if (elem.id === newSlot[i].className){
         console.log('true', elem.id, newSlot[i].className);
         list[0].append(newElem);
         newElem.id = 'done';
         list[0].className = 'done';
       }
+      debugger;
+    }
+    else{
+      // wordCheck.shift();
+      // continue;
     }
     console.log('count', trueCount);
   }
@@ -261,6 +336,7 @@ function click(event) {
     console.log('false', trueCount);
   }
 
+  
 }
 
 
@@ -280,7 +356,8 @@ function getRandom() {
   return Math.floor(Math.random() * allAlphabets.length);
 }
 
-function goodJob() { // not used yet
+var goodJob = function() { // not used yet
+  debugger;
   var elem = document.getElementById('modal');
 
   var div1 = document.createElement('div');
@@ -299,6 +376,7 @@ function goodJob() { // not used yet
   p1.innerHTML = `Good Job ! <br>You Spelled <br> ${strings}`;
   div1.appendChild(p1);
 
+
   
   var butt = document.createElement('button');
   butt.addEventListener('click', gif);
@@ -307,7 +385,7 @@ function goodJob() { // not used yet
   butt.innerHTML = 'Bonus Puzzle';
   div1.append(butt);
 
-
+  // startFunction();
 }
 
 
@@ -351,186 +429,19 @@ function goodJob() { // not used yet
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+var puzzle = {
+  square: [],
+  square2: [],
+  square3: [],
+  square4: [],
+  square5: [],
+  square6: [],
+};
 
 
 
 function gif() {
+  debugger;
   
   rem();
 
@@ -560,8 +471,9 @@ function gif() {
   span.id = 'x';
   square.appendChild(span);
 
-  console.log('square', event.target.id);
   place.appendChild(square);
+  squareArray.push(square.id);
+  console.log('square', squareArray);
 
 
   var square2 = document.createElement('div');
@@ -580,8 +492,10 @@ function gif() {
   span.id = 'xx';
   square2.appendChild(span);
 
-  console.log('square2', event.target.id);
+  
   place.appendChild(square2);
+  squareArray.push(square2.id);
+  console.log('square2', squareArray);
 
 
   var square3 = document.createElement('div');
@@ -602,6 +516,8 @@ function gif() {
 
   console.log('square3', event.target.id);
   place.appendChild(square3);
+  squareArray.push(square3.id);
+  console.log('square3', squareArray);
 
 
   var square4 = document.createElement('div');
@@ -622,6 +538,8 @@ function gif() {
 
   console.log('square4', event.target.id);
   place.appendChild(square4);
+  squareArray.push(square4.id);
+  console.log('square4', squareArray);
 
 
   var square5 = document.createElement('div');
@@ -642,6 +560,8 @@ function gif() {
 
   console.log('square5', event.target.id);
   place.appendChild(square5);
+  squareArray.push(square5.id);
+  console.log('square5', squareArray);
 
 
   var square6 = document.createElement('div');
@@ -662,14 +582,29 @@ function gif() {
 
   console.log('square6', event.target.id);
   place.appendChild(square6);
+  squareArray.push(square6.id);
+  console.log('square6', squareArray);
 
+  
+  var butt = document.createElement('button');
+  butt.addEventListener('click', nextWord); // create function to go to next word
+  
+  butt.className = 'bu';
+  butt.id = 'butter';
+  butt.innerHTML = 'Next Word';
+  place.append(butt);
 
 }
 
+
+
 //removes divs on click
 function removeDiv () {
-  
+  debugger;
   var fadeTarget = document.getElementById(event.target.id);
+  
+
+
   var fadeEffect = setInterval(function () {
     if (!fadeTarget.style.opacity) {
       fadeTarget.style.opacity = 1;
@@ -679,8 +614,10 @@ function removeDiv () {
     } else {
       clearInterval(fadeEffect);
     }
-  }, 200);
+  }, 100);
 }
+
+
 //function to remove paragraph and button
 function rem () {
   var a = document.getElementById('p');
@@ -689,8 +626,17 @@ function rem () {
   b.remove();
 }
 
+var squareArray = [];
 
-
-
+function nextWord () {
+  var removePuzzle = document.getElementById('a');
+  // var elemPic = document.getElementsByClassName('z');
+  removePuzzle.remove();
+  // elemPic.remove();
+  // var z = document.getElementsByClassName('z');
+  // console.log('z', z);
+  // z.remove();
+  startFunction();
+}
 
 
