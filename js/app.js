@@ -19,6 +19,9 @@ console.log('leveltwo', levelTwoPics);
 var levelThreePics = [];
 console.log('level3', levelThreePics);
 
+var giffy = [];
+console.log('giff', giffy);
+
 var levels = {
   one: [],
   two: [],
@@ -26,7 +29,7 @@ var levels = {
 };
 
 console.log('levels', levels);
-
+var viewedImages = 0;
 
 
 function ImageAlph(name, ext) {
@@ -76,29 +79,38 @@ new LevelOne('Star', 'png');
 new LevelOne('Dog', 'png');
 
 
-function levelTwo (name, ext) {
+function LevelTwo (name, ext) {
   this.name = name;
   this.ext = ext;
   this.filePath = `img/${name}.${ext}`;
   levels.two.push(this);
 }
 
-new levelTwo('Apple', 'png');
-new levelTwo('Dragon', 'png');
-new levelTwo('Bubble', 'png');
+new LevelTwo('Apple', 'png');
+new LevelTwo('Dragon', 'png');
+new LevelTwo('Bubble', 'png');
 
-function levelThree (name, ext) {
+function LevelThree (name, ext) {
   this.name = name;
   this.ext = ext;
   this.filePath = `img/${name}.${ext}`;
   levels.three.push(this);
 }
 
-new levelThree('Elephant', 'png');
-new levelThree('Strawberry', 'png');
-new levelThree('Butterfly', 'png');
+new LevelThree('Elephant', 'png');
+new LevelThree('Strawberry', 'png');
+new LevelThree('Butterfly', 'png');
 
+function Giff (name, ext) {
+  this.name = name;
+  this.ext = ext;
+  this.filePath = `img/${name}.${ext}`;
+  giffy.push(this);
+}
 
+new Giff('giphy', 'gif');
+new Giff('kid', 'gif');
+new Giff('kid', 'gif');
 
 function startButtonBye () {
   var elem = document.getElementById('start');
@@ -133,9 +145,7 @@ function startFunction () {
     for (var i = z.length - 1; i >= 0; --i) {
       z[i].remove();
 
-    }
-    // elem.remove();
-    // elem.parentNode.remove();
+    } 
   }
   if (zz.length === 0) {
     console.log('true');
@@ -145,8 +155,7 @@ function startFunction () {
       zz[i].remove();
 
     }
-    // elem.remove();
-    // elem.parentNode.remove();
+
   }
 
   var currentImage = [];
@@ -159,10 +168,8 @@ function startFunction () {
 
   }
   viewedImage = currentImage;
-  // for (var i =0; i < levels.one.length; i++){
-  //   debugger;
-  // viewedImage[i] += currentImage;
-  // };
+  viewedImages ++;
+  
   console.log('currentimage', currentImage);
   console.log('viewedimage', viewedImage);
   var newElem = document.createElement('img');
@@ -292,20 +299,18 @@ var click = function(event) {
       }else {
         console.log('false', event.target.id, wordCheck[i][j]);
       }
-
-      // wordCheck.shift();
-      // continue;
     }
     console.log('count', trueCount);
   }
-  for (var i = 0; i < newSlot.length; i++) {
-    if (trueCount === wordCheck[i].length){
-      console.log('true', trueCount);
 
-      goodJob();
-    }
+  // for (var i = 0; i < newSlot.length; i++) {
+  if (trueCount === wordCheck[0].length){
+    console.log('true', trueCount);
+
+    goodJob();
   }
-  
+  // }
+
 };
 
 
@@ -326,7 +331,8 @@ function getRandom() {
 
 var goodJob = function() { // not used yet
   debugger;
-
+  
+  wordCheck = [];
   trueCount = 0;
   var elem = document.getElementById('modal');
 
@@ -356,7 +362,37 @@ var goodJob = function() { // not used yet
   // startFunction();
 };
 
+var goodJobLevelOne = function() { // not used yet
+  debugger;
 
+  
+  var elem = document.getElementById('modal');
+
+  var div1 = document.createElement('div');
+  div1.className = 'bg-modal';
+  div1.id = 'a';
+  // document.body.appendChild(div1);
+  elem.appendChild(div1);
+  var div2 = document.createElement('div');
+  div2.className = 'modal-content';
+  div2.id = 'b';
+  div1.appendChild(div2);
+
+  var p1 = document.createElement('p');
+  p1.className = 'p1';
+  p1.id = 'p';
+  p1.innerHTML = 'Congratulations !! <br>You Passed Level One';
+  div1.appendChild(p1);
+
+  var butt = document.createElement('button');
+  butt.addEventListener('click', gif);
+  butt.className = 'button';
+  butt.id = 'but';
+  butt.innerHTML = 'Celebrate';
+  div1.append(butt);
+
+  // startFunction();
+};
 
 var puzzle = {
   square: [],
@@ -367,17 +403,23 @@ var puzzle = {
   square6: [],
 };
 
+function randomGiff() {
+  return Math.floor(Math.random() * giffy.length);
+}
 
 
 function gif() {
   debugger;
-
+  if (viewedImages === 3 ){
+    goodJobLevelOne();
+  }
   rem();
   var place = document.getElementById('b');
   var gif = document.createElement('img');
   gif.className = 'hidden-img';
-
-  gif.src = 'img/giphy.gif';
+  var gi = randomGiff();
+  console.log('gif', gi);
+  gif.src = giffy[gi].filePath;
   place.appendChild(gif);
 
   var square = document.createElement('div');
