@@ -64,16 +64,16 @@ new ImageAlph('Y', 'png');
 new ImageAlph('Z', 'png');
 
 
-function levelOne (name, ext) {
+function LevelOne (name, ext) {
   this.name = name;
   this.ext = ext;
   this.filePath = `img/${name}.${ext}`;
   levels.one.push(this);
 }
 
-new levelOne('Car', 'png');
-new levelOne('Star', 'png');
-new levelOne('Dog', 'png');
+new LevelOne('Car', 'png');
+new LevelOne('Star', 'png');
+new LevelOne('Dog', 'png');
 
 
 function levelTwo (name, ext) {
@@ -104,7 +104,6 @@ function startButtonBye () {
   var elem = document.getElementById('start');
   if (elem === null) {
     console.log('true');
-    
   }else{
     elem.parentNode.removeChild(elem);
   }
@@ -133,7 +132,7 @@ function startFunction () {
   }else {
     for (var i = z.length - 1; i >= 0; --i) {
       z[i].remove();
-      
+
     }
     // elem.remove();
     // elem.parentNode.remove();
@@ -144,12 +143,12 @@ function startFunction () {
   }else {
     for ( i = zz.length - 1; i >= 0; --i) {
       zz[i].remove();
-      
+
     }
     // elem.remove();
     // elem.parentNode.remove();
   }
-  
+
   var currentImage = [];
   debugger;
   currentImage[0] = randWord();
@@ -157,7 +156,7 @@ function startFunction () {
     currentImage[0] = randWord();
 
     // viewedImage = currentImage.clone();
-    
+
   }
   viewedImage = currentImage;
   // for (var i =0; i < levels.one.length; i++){
@@ -179,7 +178,7 @@ function startFunction () {
   var word =[];
   var indexLoca = [];
 
-  for (var i = 0; i < string.length; i++) {
+  for ( i = 0; i < string.length; i++) {
     word[i] = string.charAt(i);
     word[i] = word[i].toUpperCase();
 
@@ -210,7 +209,7 @@ function startFunction () {
 
   var currentTen = [];
 
-  for (var i = 0; i < 12 - indexLoca.length; i++) {
+  for ( i = 0; i < 12 - indexLoca.length; i++) {
     currentTen[i] = getRandom();
   }
 
@@ -222,7 +221,7 @@ function startFunction () {
   var shuffled = shuffle(wordPlusRandom);
   console.log('shuffled', shuffled);
   // debugger;
-  for (var i = 0; i < shuffled.length; i++) {
+  for ( i = 0; i < shuffled.length; i++) {
 
     var imgElem = document.createElement('img');
 
@@ -234,7 +233,7 @@ function startFunction () {
     alphabetElem.appendChild(imgElem);
 
   }
-  
+
   console.log('filepath', filePath);
   console.log('imgString', imgString);
 
@@ -243,45 +242,15 @@ function startFunction () {
   r.className = 'q';
 
   debugger;
-  
-  if (typeof(element) != 'undefined' && element != null) {
+
+  if (typeof(element) !== 'undefined' && element !== null) {
     console.log('true');
-    
+
   }else{
     startButtonBye();
   }
-  
-  
+
 }
-    
-  
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-// function pickLetters(){
-//   debugger;
-//   var r = document.getElementById('r');
-//   r.innerHTML = 'Pick Your Letters!';
-//   r.className = 'q';
-
-// }
-
-
 
 var imgString = [];
 var filePath = []; //  use for local storage
@@ -290,55 +259,54 @@ var wordCheck =[];
 var trueCount = 0;
 
 var click = function(event) {
-
+  
   debugger;
   // console.log('clicked', event.target.id);
-  for(var i = 0; i < filePath.length; i++) { // 12
-    if(event.target.id === wordCheck[0][i]) {
-      console.log('true', event.target.id, wordCheck[0][i]);
+  for(var i = 0; i < wordCheck.length; i++) { 
+    for(var j = 0; j < wordCheck[i].length; j++) {
+      if(event.target.id === wordCheck[i][j]) {
+        console.log('true', event.target.id, wordCheck[i][j]);
 
-      trueCount += 1;
-      var elem = document.getElementById(event.target.id);
-      console.log('elem', elem);
-      elem.remove();
-      delete wordCheck[0][i];
+        trueCount += 1;
+        var elem = document.getElementById(event.target.id);
+        console.log('elem', elem);
+        elem.remove();
+        delete wordCheck[i][j];
       // wordCheck[0].splice(i, 1);
-      console.log('wordcheck', wordCheck);
-      var list = document.getElementsByClassName(event.target.id);
-      console.log('list', list);
-      var newElem = document.createElement('img');
-      newElem = elem;
-      console.log('newElem', newElem);
-
-    
-
-      if (elem.id === newSlot[i].className){
-        console.log('true', elem.id, newSlot[i].className);
-        list[0].append(newElem);
-        newElem.id = 'done';
-        list[0].className = 'done';
+        console.log('wordcheck', wordCheck);
+        var list = document.getElementsByClassName(event.target.id);
+        console.log('list', list);
+        var newElem = document.createElement('img');
+        newElem = elem;
+        console.log('newElem', newElem);
+        
+        for (var k = 0; k < newSlot.length; k++) {
+          if (elem.id === newSlot[k].className){
+            console.log('true', elem.id, newSlot[k].className);
+            list[0].append(newElem);
+            newElem.id = 'done';
+            list[0].className = 'done';
+          }
+        }
+        debugger;
+      }else {
+        console.log('false', event.target.id, wordCheck[i][j]);
       }
-      debugger;
-    }
-    else{
+
       // wordCheck.shift();
       // continue;
     }
     console.log('count', trueCount);
   }
-  
-  if (trueCount === wordCheck[0].length){
-    console.log('true', trueCount);
+  for (var i = 0; i < newSlot.length; i++) {
+    if (trueCount === wordCheck[i].length){
+      console.log('true', trueCount);
 
-    goodJob();
-    
-  } else {
-    console.log('false', trueCount);
+      goodJob();
+    }
   }
-
   
-}
-
+};
 
 
 function shuffle(a) {
@@ -358,6 +326,8 @@ function getRandom() {
 
 var goodJob = function() { // not used yet
   debugger;
+
+  trueCount = 0;
   var elem = document.getElementById('modal');
 
   var div1 = document.createElement('div');
@@ -376,8 +346,6 @@ var goodJob = function() { // not used yet
   p1.innerHTML = `Good Job ! <br>You Spelled <br> ${strings}`;
   div1.appendChild(p1);
 
-
-  
   var butt = document.createElement('button');
   butt.addEventListener('click', gif);
   butt.className = 'button';
@@ -386,46 +354,7 @@ var goodJob = function() { // not used yet
   div1.append(butt);
 
   // startFunction();
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
 
 
 
@@ -442,18 +371,14 @@ var puzzle = {
 
 function gif() {
   debugger;
-  
-  rem();
 
+  rem();
   var place = document.getElementById('b');
-  
   var gif = document.createElement('img');
   gif.className = 'hidden-img';
 
-  
   gif.src = 'img/giphy.gif';
   place.appendChild(gif);
-
 
   var square = document.createElement('div');
   square.id = 'square';
@@ -492,11 +417,9 @@ function gif() {
   span.id = 'xx';
   square2.appendChild(span);
 
-  
   place.appendChild(square2);
   squareArray.push(square2.id);
   console.log('square2', squareArray);
-
 
   var square3 = document.createElement('div');
   square3.id = 'square3';
@@ -585,10 +508,9 @@ function gif() {
   squareArray.push(square6.id);
   console.log('square6', squareArray);
 
-  
   var butt = document.createElement('button');
   butt.addEventListener('click', nextWord); // create function to go to next word
-  
+
   butt.className = 'bu';
   butt.id = 'butter';
   butt.innerHTML = 'Next Word';
@@ -602,8 +524,6 @@ function gif() {
 function removeDiv () {
   debugger;
   var fadeTarget = document.getElementById(event.target.id);
-  
-
 
   var fadeEffect = setInterval(function () {
     if (!fadeTarget.style.opacity) {
