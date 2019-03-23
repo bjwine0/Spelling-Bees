@@ -3,48 +3,45 @@
 <head>
   <title>Spelling-Bees</title>
   <link rel="stylesheet" href="css/reset.css">
-  
-  <link rel="stylesheet" href="css/styles.css">
-  
+  <link rel="stylesheet" href="css/form.css">
   <link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet">
 </head>
-<body id="page1">
+<body style= "background-image: url(img/background.png)">
   <header id="clouds" >
       
     <img class="bee" src="img/bee.png" alt="bee image" width="200px" height="200px">
     <h1 class="title">Spelling Bees</h1>
-    <p class='pap'>Word-Picture Association Games</p>
-    <ul>
+    <ul id="links">
       <li><a href="index.html">Home</a></li>
       <li><a href="Log In">Log In</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="form.html">Add Your Own Word!</a></li>
-
     </ul>
   
   </header>
 
-  <div id="modal"></div>
+  <form>
+    <div id=arrays>How many syllables is the word?<br>
+    <input type="text" name="syllables">
+    </div>
+    <div id="wordInput">
+    What is the word you want to add?<br>
+    <br>
+    <input type="text" name="word">
+    </div>
+    <div id="pictureInput">
+    Add the picture file that you want<br>
+    to match the word!<br>
+    <input type="text">
+    </div>
+    <div id="Submit">
+    <input type="submit" value="Add Your Word!">
+    </div>  
 
-  <main>
-    <div id="pre">   <a href=""></a>  <p>Pre-Kindergarten</p></div>
-    <a href="game.html"> <div id="k" ><p>Kindergarten</p></div>  </a>
-    <div id="first">  <a href=""></a><p>1st Grade</p></div>
-    <div id="second">  <a href=""></a><p>2nd Grade</p></div>
-  </main>
-
-  <script src="js/intro.js"></script>
-  
-  
-
- 
 
 
- 
+  </form>
 
-    
-    
-    
-    
 </body>
+
 </html>

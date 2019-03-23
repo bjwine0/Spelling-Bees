@@ -46,6 +46,18 @@ main {
 #pre {
   background-color: orange;
   height: 120px;
+
+  color: green;
+}
+#pre p {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 43px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Sniglet', cursive;
+
   color:white;
   font-size: 30px;
   margin-bottom: 50px;
@@ -55,10 +67,15 @@ main {
   opacity: 0.5;
   text-align: center;
   position: relative;
+
 }
 #k {
   background-color: red;
   height: 120px;
+
+  color: blue;
+  font-size: 30px
+
   color:white;
   font-size: 30px;
   margin-bottom: 50px;
@@ -68,10 +85,24 @@ main {
   opacity: 0.5;
   text-align: center;
   position: relative;
+
+}
+#k p{
+  font-size: 30px;
+  text-align: center;
+  padding-top: 43px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Sniglet', cursive;
 }
 #first {
   background-color: green;
   height: 120px;
+
+  color: orange;
+  font-size: 30px
+
   color:white;
   font-size: 30px;
   margin-bottom: 50px;
@@ -81,12 +112,38 @@ main {
   opacity: 0.5;
   text-align: center;
   position: relative;
+
+}
+#first p{
+  font-size: 30px;
+  text-align: center;
+  padding-top: 43px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Sniglet', cursive;
 }
 #second {
   background-color: blue;
   height: 120px;
+
+  color:yellow;
+  font-size: 30px
+}
+#second p{
+  font-size: 30px;
+  text-align: center;
+  padding-top: 43px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Sniglet', cursive;
+}
+div {
+
   color:white;
   font-size: 30px;
+
   margin-bottom: 50px;
   width: 700px;
   margin: 50px auto;
@@ -98,11 +155,23 @@ main {
 
 ul {
   float: right;
-  margin-top: 25px;
+  margin-top: 10px;
   margin-right: 20px;
+  font-family: 'Sniglet', cursive;
+}
+a {
+  color: blue;
 }
 li {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 5px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  background-color:white;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 15px;
 }
 #one {
   padding-left: 250px;
