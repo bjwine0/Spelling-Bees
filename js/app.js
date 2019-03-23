@@ -259,49 +259,53 @@ var wordCheck =[];
 var trueCount = 0;
 
 var click = function(event) {
-
+  
   debugger;
   // console.log('clicked', event.target.id);
-  for(var i = 0; i < filePath.length; i++) { // 12
-    if(event.target.id === wordCheck[0][i]) {
-      console.log('true', event.target.id, wordCheck[0][i]);
+  for(var i = 0; i < wordCheck.length; i++) { 
+    for(var j = 0; j < wordCheck[i].length; j++) {
+      if(event.target.id === wordCheck[i][j]) {
+        console.log('true', event.target.id, wordCheck[i][j]);
 
-      trueCount += 1;
-      var elem = document.getElementById(event.target.id);
-      console.log('elem', elem);
-      elem.remove();
-      delete wordCheck[0][i];
+        trueCount += 1;
+        var elem = document.getElementById(event.target.id);
+        console.log('elem', elem);
+        elem.remove();
+        delete wordCheck[i][j];
       // wordCheck[0].splice(i, 1);
-      console.log('wordcheck', wordCheck);
-      var list = document.getElementsByClassName(event.target.id);
-      console.log('list', list);
-      var newElem = document.createElement('img');
-      newElem = elem;
-      console.log('newElem', newElem);
-
-      if (elem.id === newSlot[i].className){
-        console.log('true', elem.id, newSlot[i].className);
-        list[0].append(newElem);
-        newElem.id = 'done';
-        list[0].className = 'done';
+        console.log('wordcheck', wordCheck);
+        var list = document.getElementsByClassName(event.target.id);
+        console.log('list', list);
+        var newElem = document.createElement('img');
+        newElem = elem;
+        console.log('newElem', newElem);
+        
+        for (var k = 0; k < newSlot.length; k++) {
+          if (elem.id === newSlot[k].className){
+            console.log('true', elem.id, newSlot[k].className);
+            list[0].append(newElem);
+            newElem.id = 'done';
+            list[0].className = 'done';
+          }
+        }
+        debugger;
+      }else {
+        console.log('false', event.target.id, wordCheck[i][j]);
       }
-      debugger;
-    }
-    else{
+
       // wordCheck.shift();
       // continue;
     }
     console.log('count', trueCount);
   }
+  for (var i = 0; i < newSlot.length; i++) {
+    if (trueCount === wordCheck[i].length){
+      console.log('true', trueCount);
 
-  if (trueCount === wordCheck[0].length){
-    console.log('true', trueCount);
-
-    goodJob();
-
-  } else {
-    console.log('false', trueCount);
+      goodJob();
+    }
   }
+  
 };
 
 
@@ -322,6 +326,8 @@ function getRandom() {
 
 var goodJob = function() { // not used yet
   debugger;
+
+  trueCount = 0;
   var elem = document.getElementById('modal');
 
   var div1 = document.createElement('div');
