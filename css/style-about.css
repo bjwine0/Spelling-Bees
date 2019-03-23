@@ -1,11 +1,13 @@
-body {
-  
+/* #page3 {
+  background-image: "img/background.png";
   margin: 0;
-  background-position: center;
-  background: fixed;
+  height:1000px;
   background-repeat: no-repeat;
   
-}
+  
+} */
+
+
 header {
   position: relative;
   background: rgb(215, 228, 37);
@@ -33,26 +35,13 @@ header {
 }
 #links {
   float: right;
-  margin-top: 10px;
+  margin-top: 25px;
   margin-right: 20px;
   font-family: 'Sniglet', cursive;
-  
-  
-}
-a {
-  color: blue;
 }
 li {
-  margin-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 5px;
-  padding-top: 10px;
-  padding-bottom: 5px;
-  background-color:white;
-  font-size: 14px;
-  text-align: center;
-  border-radius: 15px;}
-
+  margin-bottom: 10px;
+}
 h2 {
   position: relative;
   left: 450px;
