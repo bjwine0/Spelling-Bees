@@ -126,41 +126,6 @@ document.getElementById('start').addEventListener('click', startFunction);
 
 
 
-function startFunction () {
-  
-  function pickLetters(){
-  var para = document.createElement("P");                     
-  var t = document.createTextNode("Pick Your Letters!");      
-  para.appendChild(t);                                          
-  document.getElementById("Pick").appendChild(para);}
-  
-  pickLetters();
-
-  function makeBanner(){
-    var img = document.createElement("img");
-    img.src = "img/letterScroll.png";
-    var src = document.getElementById("letterScroll");
-    src.appendChild(img);}
-    
-    makeBanner();
-
-    
-
-    function makeTicket(){
-      var img = document.createElement("img");
-      img.src = "img/ticket.jpeg";
-      var src = document.getElementById("ticket");
-      src.appendChild(img);}
-      
-      makeTicket();
-  
-  
-  for (var i = 0; i <= levelOnePics.length; i++) {
-    var newElem = document.createElement('img');
-    newElem.src = levelOnePics[i].filePath;
-    newElem.id = levelOnePics[i].name;
-    getPicElem.appendChild(newElem);
-
 
 function randWord() {
   return Math.floor(Math.random() * levels.one.length);
@@ -279,7 +244,9 @@ function startFunction () {
   console.log('filepath', filePath);
   console.log('imgString', imgString);
 
-
+  var r = document.getElementById('r');
+  r.innerHTML = 'Pick Your Letters!';
+  r.className = 'q';
 
   debugger;
 
@@ -290,7 +257,6 @@ function startFunction () {
     startButtonBye();
   }
 
-
 }
 
 var imgString = [];
@@ -299,12 +265,10 @@ var newSlot = [];
 var wordCheck =[];
 var trueCount = 0;
 
-
 var click = function(event) {
   
   debugger;
   // console.log('clicked', event.target.id);
-
   for(var i = 0; i < wordCheck.length; i++) { 
     for(var j = 0; j < wordCheck[i].length; j++) {
       if(event.target.id === wordCheck[i][j]) {
@@ -315,7 +279,6 @@ var click = function(event) {
         console.log('elem', elem);
         elem.remove();
         delete wordCheck[i][j];
-
       // wordCheck[0].splice(i, 1);
         console.log('wordcheck', wordCheck);
         var list = document.getElementsByClassName(event.target.id);
