@@ -126,7 +126,6 @@ document.getElementById('start').addEventListener('click', startFunction);
 
 
 
-
 function randWord() {
   return Math.floor(Math.random() * levels.one.length);
 }
@@ -140,32 +139,32 @@ function startFunction () {
   console.log(z);
   if (z.length === 0) {
     console.log('true');
-
+    
   }else {
     for (var i = z.length - 1; i >= 0; --i) {
       z[i].remove();
-
+      
     } 
   }
   if (zz.length === 0) {
     console.log('true');
-
+    
   }else {
     for ( i = zz.length - 1; i >= 0; --i) {
       zz[i].remove();
-
+      
     }
-
+    
   }
-
+  
   var currentImage = [];
   debugger;
   currentImage[0] = randWord();
   while (viewedImage.indexOf(currentImage[0]) !== -1) {
     currentImage[0] = randWord();
-
+    
     // viewedImage = currentImage.clone();
-
+    
   }
   viewedImage = currentImage;
   viewedImages ++;
@@ -177,18 +176,18 @@ function startFunction () {
   newElem.id = levels.one[currentImage].name;
   newElem.className = 'z';
   getPicElem.appendChild(newElem);
-
-
+  
+  
   var string = levels.one[currentImage].name;
-
+  
   strings = string;
   var word =[];
   var indexLoca = [];
-
+  
   for ( i = 0; i < string.length; i++) {
     word[i] = string.charAt(i);
     word[i] = word[i].toUpperCase();
-
+    
   }
   wordCheck.push(word);
   for ( i = 0; i < word.length; i++) {
@@ -199,9 +198,9 @@ function startFunction () {
     newSlot.push(newSlots);
     console.log('slots', newSlots);
     slots.appendChild(newSlots);
-
+    
   }
-
+  
   console.log('word', word);
   for (var j = 0; j < word.length; j++) {
     for( var k = 0; k < allAlphabets.length; k++) {
@@ -213,32 +212,39 @@ function startFunction () {
       }
     }
   }
-
+  function pickLetters(){
+    var para = document.createElement("P");                     
+    var t = document.createTextNode("Pick Your Letters!");      
+    para.appendChild(t);                                          
+    document.getElementById("Pick").appendChild(para);}
+    
+    pickLetters();
+  
   var currentTen = [];
-
+  
   for ( i = 0; i < 12 - indexLoca.length; i++) {
     currentTen[i] = getRandom();
   }
-
+  
   var wordPlusRandom = indexLoca.concat(currentTen);
   imgString.push(wordPlusRandom);
   console.log('curentten', currentTen);
   console.log('wordPlusRandom', wordPlusRandom);
-
+  
   var shuffled = shuffle(wordPlusRandom);
   console.log('shuffled', shuffled);
   // debugger;
   for ( i = 0; i < shuffled.length; i++) {
-
+    
     var imgElem = document.createElement('img');
-
+    
     imgElem.src = allAlphabets[shuffled[i]].filePath;
     imgElem.id = allAlphabets[shuffled[i]].name;
     imgElem.className = 'z';
     filePath[i] = shuffled[i];
     imgElem.addEventListener('click', click);
     alphabetElem.appendChild(imgElem);
-
+    
   }
 
   console.log('filepath', filePath);
