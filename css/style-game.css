@@ -81,7 +81,17 @@ li {
   
 } */
 
-
+#letterScroll{
+  position: absolute;
+  left: 300px;
+  bottom: 50px;
+}
+#letterScroll img {
+  width: 1270px;
+  height: 200px;
+  opacity: 0.8;
+  
+}
 
 #slots {
   
