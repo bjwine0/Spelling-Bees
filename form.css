@@ -1,0 +1,130 @@
+body {
+  
+  margin: 0;
+  background-position: center;
+  background: fixed;
+  background-repeat: no-repeat;
+  
+}
+header {
+  position: relative;
+  background: rgb(215, 228, 37);
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 10px;
+  
+  border-top-width: 5px;
+  border-right-width: 5px;
+  height: 150px;
+  border-radius: 25px;
+
+}
+
+.bee {
+  background:none;
+  float: left;
+}
+.title {
+  position: absolute;
+  font-family: 'Sniglet', cursive;
+  font-size: 80px;
+  left: 215px;
+  top: 35px;
+}
+#links {
+  float: right;
+  margin-top: 10px;
+  margin-right: 20px;
+  font-family: 'Sniglet', cursive;
+  
+  
+}
+a {
+  color: blue;
+}
+li {
+  margin-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 5px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  background-color:white;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 15px;
+  
+}
+#Submit {
+  position: absolute;
+  right: 900px;
+  top: 500px;
+  font-family: 'Sniglet', cursive;
+  
+}
+input[type=submit] {
+  padding:5px 15px; 
+  background: rgba(255, 255, 255, 0.8);
+  border:0 none;
+  cursor:pointer;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  -webkit-border-radius: 5px;
+  border-radius: 15px; 
+  font-family: 'Sniglet', cursive;
+  color:  blue;
+  font-size: 30px;
+}
+#arrays {
+  position: absolute;
+  top: 625px;
+  left: 330px;
+  width: 450px;
+  background-color: rgba(243, 28, 28, 0.8);
+  font-family: 'Sniglet', cursive;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 55px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 25px;
+}
+select {
+  border: none;
+  border-radius: 5px;
+  padding: 15px 15px;
+  width: 50px;
+  font-family: 'Sniglet', cursive;
+  font-size: 15px;
+  color: blue;
+}
+#wordInput {
+  position: absolute;
+  left: 680px;
+  top: 200px;
+  width: 450px;
+  background-color: rgba(28, 236, 97, 0.6);
+  font-family: 'Sniglet', cursive;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  border-radius: 25px;
+}
+#pictureInput {
+  position: absolute;
+  right: 450px;
+  top: 625px;
+  width: 450px;
+  background-color: rgba(222, 255, 37, 0.815);
+  font-family: 'Sniglet', cursive;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 89px;
+  padding-bottom: 82px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 25px;
+}
