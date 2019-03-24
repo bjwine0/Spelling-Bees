@@ -6,8 +6,6 @@ body {
   background-repeat: no-repeat;
   
 }
-
-
 header {
   position: relative;
   background: rgb(215, 228, 37);
@@ -36,13 +34,26 @@ header {
 }
 #links {
   float: right;
-  margin-top: 25px;
+  margin-top: 10px;
   margin-right: 20px;
-}
-#links li {
-  margin-bottom: 10px;
   font-family: 'Sniglet', cursive;
+  
+  
 }
+a {
+  color: blue;
+}
+li {
+  margin-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 5px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  background-color:white;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 15px;}
+  
 #alphabet{
   position: absolute;
   left: 350px;
