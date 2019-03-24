@@ -1,26 +1,24 @@
-/* #page3 {
-  background-image: "img/background.png";
+body {
+  
   margin: 0;
-  height:1000px;
+  background-position: center;
+  background: fixed;
   background-repeat: no-repeat;
   
-  
-} */
-
-
+}
 header {
   position: relative;
   background: rgb(215, 228, 37);
   margin-left: 50px;
   margin-right: 50px;
   margin-top: 10px;
-  
   border-top-width: 5px;
   border-right-width: 5px;
   height: 150px;
   border-radius: 25px;
+  font-family: 'Sniglet', cursive;
+} 
 
-}
 
 .bee {
   background:none;
@@ -29,19 +27,39 @@ header {
 .title {
   position: absolute;
   font-family: 'Sniglet', cursive;
+  text-align: center;
   font-size: 80px;
   left: 215px;
   top: 35px;
 }
 #links {
   float: right;
-  margin-top: 25px;
+  margin-top: 10px;
   margin-right: 20px;
-  font-family: 'Sniglet', cursive;
+  font-family: 'Sniglet', cursive;}
+  
+ul {
+    float: right;
+    margin-top: 10px;
+    margin-right: 20px;
+    font-family: 'Sniglet', cursive;
+  } 
+  
+
+a {
+  color: blue;
 }
 li {
-  margin-bottom: 10px;
-}
+  margin-bottom: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  background-color:white;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 15px;}
+
 h2 {
   position: relative;
   left: 450px;

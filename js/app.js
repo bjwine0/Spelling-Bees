@@ -244,11 +244,7 @@ function startFunction () {
   console.log('filepath', filePath);
   console.log('imgString', imgString);
 
-  var r = document.getElementById('r');
-  r.innerHTML = 'Pick Your Letters!';
-  r.className = 'q';
 
-  debugger;
 
   if (typeof(element) !== 'undefined' && element !== null) {
     console.log('true');
