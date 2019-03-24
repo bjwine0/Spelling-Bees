@@ -220,6 +220,13 @@ function startFunction () {
     
     pickLetters();
   
+    function makeBanner(){
+      var img = document.createElement("img");
+      img.src = "img/letterScroll.png";
+      var src = document.getElementById("letterScroll");
+      src.appendChild(img);}
+      
+      makeBanner();
   var currentTen = [];
   
   for ( i = 0; i < 12 - indexLoca.length; i++) {
