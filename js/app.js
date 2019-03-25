@@ -627,6 +627,8 @@ function nextWord () {
   var removeAlpha = document.getElementById('alphabet');
   var removeScroll = document.getElementById('letterScroll');
   var removePick = document.getElementById('Pick');
+  var removeTicket = document.getElementById('ticket');
+  var removeGoal = document.getElementById('goal');
   // var removePuzzle = document.getElementById('a');
   // var elemPic = document.getElementsByClassName('z');
   removePuzzle.remove();
@@ -635,15 +637,17 @@ function nextWord () {
   removeAlpha.remove();
   removeScroll.remove();
   removePick.remove();
-  remove.startFunction.remove();
+  removeTicket.remove();
+  removeGoal.remove();
+  // remove.startFunction.remove();
   // remove();
   // elemPic.remove();
   // var z = document.getElementsByClassName('z');
   // console.log('z', z);
   // z.remove();
-  
+}{
+  nextWord();
+  startFunction();
 } 
 
-// nextWord();
 // startFunction();
-
