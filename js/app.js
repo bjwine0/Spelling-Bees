@@ -119,7 +119,7 @@ function startButtonBye () {
   }else{
     elem.parentNode.removeChild(elem);
   }
-
+  
 }
 
 document.getElementById('start').addEventListener('click', startFunction);
@@ -133,6 +133,23 @@ function randWord() {
 var viewedImage = [];
 var strings = '';
 function startFunction () {
+  function pickLetters(){
+    var para = document.createElement("P");                     
+    var t = document.createTextNode("Pick Your Letters!");      
+    para.appendChild(t);                                          
+    document.getElementById("Pick").appendChild(para);}
+    
+    pickLetters();
+  
+    function makeBanner(){
+      var img = document.createElement("img");
+      img.src = "img/letterScroll-1.png";
+      var src = document.getElementById("letterScroll");
+      src.appendChild(img);}
+      
+      makeBanner();
+
+      
   debugger;
   var z = document.getElementsByClassName('z');
   var zz = document.getElementsByClassName('done');
@@ -212,21 +229,6 @@ function startFunction () {
       }
     }
   }
-  function pickLetters(){
-    var para = document.createElement("P");                     
-    var t = document.createTextNode("Pick Your Letters!");      
-    para.appendChild(t);                                          
-    document.getElementById("Pick").appendChild(para);}
-    
-    pickLetters();
-  
-    function makeBanner(){
-      var img = document.createElement("img");
-      img.src = "img/letterScroll.png";
-      var src = document.getElementById("letterScroll");
-      src.appendChild(img);}
-      
-      makeBanner();
   var currentTen = [];
   
   for ( i = 0; i < 12 - indexLoca.length; i++) {
@@ -593,21 +595,40 @@ function removeDiv () {
 function rem () {
   var a = document.getElementById('p');
   var b = document.getElementById('but');
+  // var c = document.getElementById('letterScroll');
+  // var d = document.getElementById('Pick');
   a.remove();
   b.remove();
+  // c.remove();
+  // d.remove();
 }
 
 var squareArray = [];
 
 function nextWord () {
   var removePuzzle = document.getElementById('a');
+  var removeSlots = document.getElementById('slots');
+  var removeImg = document.getElementById('level-img');
+  var removeAlpha = document.getElementById('alphabet');
+  var removeScroll = document.getElementById('letterScroll');
+  var removePick = document.getElementById('Pick');
+  // var removePuzzle = document.getElementById('a');
   // var elemPic = document.getElementsByClassName('z');
   removePuzzle.remove();
+  removeSlots.remove();
+  removeImg.remove();
+  removeAlpha.remove();
+  removeScroll.remove();
+  removePick.remove();
+  remove.startFunction.remove();
+  // remove();
   // elemPic.remove();
   // var z = document.getElementsByClassName('z');
   // console.log('z', z);
   // z.remove();
-  startFunction();
-}
+  
+} 
 
+// nextWord();
+// startFunction();
 
