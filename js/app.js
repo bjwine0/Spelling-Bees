@@ -148,6 +148,21 @@ function startFunction () {
       src.appendChild(img);}
       
       makeBanner();
+      function points(){  //this will need to be called outside after we have our finish rounds counter setup. just here as a shell for fill
+        var para = document.createElement("P");                     
+        var t = document.createTextNode("Puzzle Points =");      
+        para.appendChild(t);                                          
+        document.getElementById("goal").appendChild(para);}
+        
+        points();
+  
+      function makeTicket(){
+        var img = document.createElement("img");
+        img.src = "img/ticket-1.jpeg";
+        var src = document.getElementById("ticket");
+        src.appendChild(img);}
+        
+        makeTicket();
 
       
   debugger;
