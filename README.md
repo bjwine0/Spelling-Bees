@@ -1,6 +1,7 @@
 # Spelling-Bees
 
-# [KcalWorks.com](http://kcalworks.com/)
+# [Spell-bees.com](http://bit.ly/0beez0)
+
 
 Kindergarden picture-word association game with syllable and vowel education
 1. Brad
